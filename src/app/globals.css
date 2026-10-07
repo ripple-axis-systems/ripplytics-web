@@ -1,0 +1,187 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0b0f1f;
+  --navy-elevated: #12182b;
+  --navy-soft: #1a2238;
+  --teal: #0fa88f;
+  --teal-muted: #0c8a75;
+  --teal-soft: rgba(15, 168, 143, 0.14);
+  --graphite: #2a3145;
+  --mist: #e8ecf4;
+  --off-white: #f4f6fa;
+  --muted: #9aa3b5;
+  --line: rgba(232, 236, 244, 0.12);
+  --line-strong: rgba(232, 236, 244, 0.22);
+  --background: var(--navy);
+  --foreground: var(--mist);
+  --font-display: var(--font-syne);
+  --font-body: var(--font-manrope);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy: var(--navy);
+  --color-navy-elevated: var(--navy-elevated);
+  --color-navy-soft: var(--navy-soft);
+  --color-teal: var(--teal);
+  --color-teal-muted: var(--teal-muted);
+  --color-graphite: var(--graphite);
+  --color-mist: var(--mist);
+  --color-off-white: var(--off-white);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), "Segoe UI", sans-serif;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: rgba(15, 168, 143, 0.35);
+  color: white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+}
+
+.bg-atmosphere {
+  background:
+    radial-gradient(ellipse 80% 50% at 70% -10%, rgba(15, 168, 143, 0.16), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 10% 20%, rgba(26, 34, 56, 0.9), transparent 50%),
+    linear-gradient(180deg, #0b0f1f 0%, #0e1426 45%, #0b0f1f 100%);
+}
+
+.bg-section-soft {
+  background:
+    linear-gradient(180deg, rgba(18, 24, 43, 0.55), rgba(11, 15, 31, 0.2)),
+    var(--navy);
+}
+
+.hairline {
+  border-color: var(--line);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes propagate {
+  0% {
+    opacity: 0.15;
+    transform: scale(0.35);
+  }
+  45% {
+    opacity: 0.55;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.45);
+  }
+}
+
+@keyframes node-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes path-draw {
+  from {
+    stroke-dashoffset: 240;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-propagate {
+  animation: propagate 4.8s ease-out infinite;
+}
+
+.animate-node-pulse {
+  animation: node-pulse 3.2s ease-in-out infinite;
+}
+
+.animate-path-draw {
+  stroke-dasharray: 240;
+  animation: path-draw 2.4s ease-out forwards;
+}
+
+.animate-fade-rise {
+  animation: fade-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .animate-propagate,
+  .animate-node-pulse,
+  .animate-path-draw,
+  .animate-fade-rise {
+    animation: none !important;
+  }
+}
