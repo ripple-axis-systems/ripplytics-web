@@ -51,7 +51,7 @@ export function RipplePath() {
         </figcaption>
 
         <svg
-          viewBox="0 0 880 210"
+          viewBox="0 0 920 220"
           className="mx-auto hidden h-auto w-full max-w-5xl md:block"
           role="img"
           aria-label="Ripple path: Origin to Decision"
@@ -65,7 +65,7 @@ export function RipplePath() {
           </defs>
 
           <path
-            d="M36 90 C110 42, 190 138, 268 82 S420 28, 508 98 S650 152, 740 78 S820 48, 844 72"
+            d="M56 96 C130 48, 210 144, 288 88 S440 34, 528 104 S670 158, 760 84 S840 54, 864 78"
             fill="none"
             stroke="url(#path-flow)"
             strokeWidth="2"
@@ -73,14 +73,14 @@ export function RipplePath() {
             strokeDasharray="1100"
           />
           <path
-            d="M36 90 C110 42, 190 138, 268 82 S420 28, 508 98 S650 152, 740 78 S820 48, 844 72"
+            d="M56 96 C130 48, 210 144, 288 88 S440 34, 528 104 S670 158, 760 84 S840 54, 864 78"
             fill="none"
             stroke="rgba(15,168,143,0.1)"
             strokeWidth="12"
           />
 
           {stages.map((stage, index) => {
-            const x = 36 + index * 112;
+            const x = 56 + index * 112;
             const y = WAVE_Y[index];
             const labelAbove = index % 2 === 0;
             const isFirst = index === 0;

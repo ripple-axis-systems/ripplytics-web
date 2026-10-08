@@ -21,7 +21,7 @@ export function SixDimensions() {
     <div className="overflow-hidden rounded-sm border border-[rgba(232,236,244,0.1)] figure-panel px-4 py-8 md:px-8 md:py-10">
       <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
         <div className="relative mx-auto aspect-square w-full max-w-[420px]" aria-hidden="true">
-          <svg viewBox="0 0 420 420" className="h-full w-full">
+          <svg viewBox="0 0 460 460" className="h-full w-full">
             <defs>
               <radialGradient id="dim-core" cx="50%" cy="50%" r="50%">
                 <stop offset="0%" stopColor="#0FA88F" stopOpacity="0.22" />
@@ -29,42 +29,41 @@ export function SixDimensions() {
               </radialGradient>
             </defs>
 
-            <circle cx="210" cy="210" r="168" fill="url(#dim-core)" />
+            <circle cx="230" cy="230" r="168" fill="url(#dim-core)" />
             <circle
-              cx="210"
-              cy="210"
-              r="132"
+              cx="230"
+              cy="230"
+              r="128"
               fill="none"
               stroke="rgba(232,236,244,0.1)"
               strokeWidth="1"
             />
             <circle
-              cx="210"
-              cy="210"
+              cx="230"
+              cy="230"
               r="62"
               fill="none"
               stroke="rgba(15,168,143,0.32)"
               strokeWidth="1.25"
             />
-            <circle cx="210" cy="210" r="7" fill="#0FA88F" className="animate-node-pulse" />
+            <circle cx="230" cy="230" r="7" fill="#0FA88F" className="animate-node-pulse" />
             <text
-              x="210"
-              y="214"
+              x="230"
+              y="258"
               textAnchor="middle"
               fill="#E8ECF4"
               fontSize="9"
               letterSpacing="0.12em"
               fontFamily="var(--font-body), sans-serif"
-              dy="28"
             >
               CONTEXT
             </text>
 
             {/* Ring connecting all six nodes */}
             <circle
-              cx="210"
-              cy="210"
-              r="132"
+              cx="230"
+              cy="230"
+              r="128"
               fill="none"
               stroke="rgba(15,168,143,0.2)"
               strokeWidth="1"
@@ -73,15 +72,15 @@ export function SixDimensions() {
 
             {sixDimensions.map((dim, index) => {
               const angle = (index / sixDimensions.length) * Math.PI * 2 - Math.PI / 2;
-              const x = 210 + Math.cos(angle) * 132;
-              const y = 210 + Math.sin(angle) * 132;
+              const x = 230 + Math.cos(angle) * 128;
+              const y = 230 + Math.sin(angle) * 128;
               const next = (index + 1) % sixDimensions.length;
               const nextAngle = (next / sixDimensions.length) * Math.PI * 2 - Math.PI / 2;
-              const nx = 210 + Math.cos(nextAngle) * 132;
-              const ny = 210 + Math.sin(nextAngle) * 132;
+              const nx = 230 + Math.cos(nextAngle) * 128;
+              const ny = 230 + Math.sin(nextAngle) * 128;
               const selected = index === active;
-              const lx = 210 + Math.cos(angle) * 178;
-              const ly = 210 + Math.sin(angle) * 178;
+              const lx = 230 + Math.cos(angle) * 172;
+              const ly = 230 + Math.sin(angle) * 172;
               const short = dim.label.replace("Systemic ", "");
 
               return (
@@ -142,8 +141,8 @@ export function SixDimensions() {
 
           {sixDimensions.map((dim, index) => {
             const angle = (index / sixDimensions.length) * Math.PI * 2 - Math.PI / 2;
-            const x = 50 + Math.cos(angle) * 31.5;
-            const y = 50 + Math.sin(angle) * 31.5;
+            const x = 50 + Math.cos(angle) * 27.8;
+            const y = 50 + Math.sin(angle) * 27.8;
             return (
               <button
                 key={`hit-${dim.id}`}
