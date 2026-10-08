@@ -173,6 +173,59 @@ a {
   animation: fade-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
+/* Desktop nav — subtle scale + teal underline; institutional, no bounce/glow */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  transform: scale(1);
+  transform-origin: center bottom;
+  transition:
+    color 0.2s ease,
+    transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 1px;
+  background: var(--teal);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+  opacity: 0.85;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: var(--teal);
+  transform: scale(1.06);
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after,
+.nav-link.is-active::after {
+  transform: scaleX(1);
+}
+
+.nav-link.is-active {
+  color: var(--teal);
+}
+
+.nav-logo-link {
+  display: inline-flex;
+  transform: scale(1);
+  transform-origin: left center;
+  transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-logo-link:hover,
+.nav-logo-link:focus-visible {
+  transform: scale(1.04);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -190,5 +243,21 @@ a {
   .animate-path-draw,
   .animate-fade-rise {
     animation: none !important;
+  }
+
+  .nav-link,
+  .nav-logo-link {
+    transition: color 0.15s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus-visible,
+  .nav-logo-link:hover,
+  .nav-logo-link:focus-visible {
+    transform: none;
+  }
+
+  .nav-link::after {
+    transition: none;
   }
 }

@@ -31,7 +31,7 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 md:gap-10 md:px-8">
-        <Logo />
+        <Logo className="nav-logo-link" />
 
         <nav
           className="hidden items-center gap-7 xl:gap-8 lg:flex"
@@ -45,8 +45,8 @@ export function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-[15px] font-medium tracking-[0.015em] transition-colors ${
-                    active ? "text-teal" : "text-mist/80 hover:text-mist"
+                  className={`nav-link text-[15px] font-medium tracking-[0.015em] ${
+                    active ? "is-active text-teal" : "text-mist/80"
                   }`}
                 >
                   {item.label}
@@ -60,7 +60,7 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-[15px] font-medium tracking-[0.015em] text-mist/70 transition-colors hover:text-mist"
+              className="nav-link text-[15px] font-medium tracking-[0.015em] text-mist/70"
             >
               {item.label}
             </Link>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { EventCaseStrips } from "@/components/observatory/EventCaseStrips";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
@@ -39,17 +40,16 @@ export default function ObservatoryPage() {
         </Reveal>
       </section>
 
-      <section className="border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
+      <EventCaseStrips />
+
+      <section className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading title="What we study" />
           </Reveal>
-          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {studyAreas.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-sm border border-[rgba(232,236,244,0.1)] bg-white/[0.02] p-5"
-              >
+              <div key={item.title} className="border-t border-[rgba(232,236,244,0.12)] pt-5">
                 <h3 className="font-display text-xl text-off-white">{item.title}</h3>
                 <p className="mt-3 text-sm text-muted">{item.body}</p>
               </div>
@@ -58,7 +58,7 @@ export default function ObservatoryPage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28">
+      <section className="border-t border-[rgba(232,236,244,0.08)] py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading title="We don't want to add to the noise.">

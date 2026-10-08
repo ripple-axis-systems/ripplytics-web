@@ -1,3 +1,4 @@
+import { RealWorldRipples } from "@/components/home/RealWorldRipples";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -134,6 +135,9 @@ export function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 06b Real-world ripples teaser */}
+      <RealWorldRipples />
 
       {/* 07 Human decision */}
       <section className="border-y border-[rgba(232,236,244,0.08)] py-20 md:py-28">

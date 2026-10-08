@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { QuestionOrbit } from "@/components/visuals/QuestionOrbit";
+import { RipplePath } from "@/components/visuals/RipplePath";
 import { RippleSequence } from "@/components/visuals/RippleSequence";
 import { SixDimensions } from "@/components/visuals/SixDimensions";
 import { pageMetadata } from "@/lib/seo";
@@ -44,9 +45,17 @@ export default function HowWeThinkPage() {
       <section className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
-            <SectionHeading eyebrow="The Ripple Sequence" title="From origin to consequence." />
+            <SectionHeading eyebrow="The Ripple Sequence" title="From origin to consequence.">
+              <p>
+                An annotated path from origin to decision — the same lens used across Ripplytics
+                thinking.
+              </p>
+            </SectionHeading>
           </Reveal>
           <div className="mt-12">
+            <RipplePath />
+          </div>
+          <div className="mt-14">
             <RippleSequence />
           </div>
         </div>

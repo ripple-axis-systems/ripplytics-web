@@ -119,3 +119,55 @@ export const contactInterests = [
   "Partnership",
   "Other",
 ] as const;
+
+/** Well-known public episodes for illustrative education only — not live RipplePoint output. */
+export const ILLUSTRATIVE_DISCLAIMER =
+  "Illustrative — for education; not a live RipplePoint output; Ripplytics does not claim to have predicted these events.";
+
+export const realWorldEpisodes = [
+  {
+    id: "covid-supply-inflation",
+    period: "2020–22",
+    title: "COVID-era supply chains and inflation transmission",
+    teaser:
+      "A health shock became a logistics shock, then a price shock — pressure moved far from where it began.",
+    happened:
+      "Pandemic lockdowns and sudden demand shifts disrupted production and shipping worldwide. What began as a public-health emergency showed up months later as shortages, freight stress and broader inflation pressure.",
+    began:
+      "Originated in public-health measures and abrupt changes in mobility, labour and demand — not in a single market price.",
+    traveled:
+      "Factories and ports → shipping and inventories → commodity and goods prices → corporate costs and household inflation → policy and rate expectations.",
+    needed:
+      "Decision-makers needed to see the chain from origin through logistics and prices — not only the initial case counts or a single CPI print.",
+  },
+  {
+    id: "energy-shock-2022",
+    period: "2022",
+    title: "Energy shock after the Russia–Ukraine war onset",
+    teaser:
+      "A geopolitical rupture transmitted through energy markets into industry, inflation and policy across regions.",
+    happened:
+      "The war’s onset and subsequent energy-market stress raised concerns about gas and oil availability, especially in Europe. Price and security of supply became a system-wide pressure, not a local commodity story.",
+    began:
+      "Originated in geopolitical conflict and energy-trade disruption — a fracture that markets and governments had to interpret in real time.",
+    traveled:
+      "Energy supply and contracts → wholesale power and fuel costs → industrial margins and household bills → inflation and fiscal responses → wider risk appetite.",
+    needed:
+      "Leaders needed visibility into transmission from geopolitics into energy, industry and inflation — beyond the headline of the conflict alone.",
+  },
+  {
+    id: "svb-banking-2023",
+    period: "2023",
+    title: "US regional banking stress and SVB",
+    teaser:
+      "Confidence and liquidity moved faster than balance-sheet headlines — stress transmitted through funding and trust.",
+    happened:
+      "Silicon Valley Bank’s failure and related regional-bank stress showed how quickly deposit flight and funding pressure can spread. The episode was as much about confidence and liquidity as about any single asset mark.",
+    began:
+      "Originated in interest-rate and portfolio mismatches at specific institutions, then in a sudden loss of depositor and market confidence.",
+    traveled:
+      "Bank portfolios and duration risk → deposit outflows and liquidity → funding markets and peer institutions → credit conditions and risk sentiment more broadly.",
+    needed:
+      "Decision-makers needed to see confidence and liquidity pathways — not only the first institution’s reported losses.",
+  },
+] as const;
