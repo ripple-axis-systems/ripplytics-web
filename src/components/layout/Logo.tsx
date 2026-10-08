@@ -10,13 +10,16 @@ export function Logo({
   className?: string;
   size?: "nav" | "footer";
 }) {
+  // Cropped marks remove ~43% transparent padding from source PNGs so CSS
+  // height maps to the visible wordmark (premium brand scale).
   const src =
     variant === "dark"
-      ? "/logos/ripplytics-logo-dark-bg.png"
-      : "/logos/ripplytics-logo-light-bg.png";
+      ? "/logos/ripplytics-mark-dark.png"
+      : "/logos/ripplytics-mark-light.png";
 
+  // Cropped mark: ~1.5–1.65× previous visible wordmark (source PNGs had ~43% v-pad).
   const sizeClass =
-    size === "footer" ? "h-9 w-auto md:h-10" : "h-11 w-auto md:h-[3.35rem]";
+    size === "footer" ? "h-7 w-auto md:h-8" : "h-9 w-auto md:h-10";
 
   return (
     <Link
@@ -27,8 +30,8 @@ export function Logo({
       <Image
         src={src}
         alt="Ripplytics"
-        width={252}
-        height={60}
+        width={220}
+        height={54}
         className={sizeClass}
         priority={size === "nav"}
       />

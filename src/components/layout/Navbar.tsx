@@ -27,14 +27,14 @@ export function Navbar() {
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
           ? "border-b border-[rgba(232,236,244,0.08)] bg-[rgba(11,15,31,0.9)] backdrop-blur-md py-3.5"
-          : "bg-transparent py-6"
+          : "bg-transparent py-5 md:py-6"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-8 px-5 md:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 md:gap-10 md:px-8">
         <Logo />
 
         <nav
-          className="hidden items-center gap-8 xl:gap-9 lg:flex"
+          className="hidden items-center gap-7 xl:gap-8 lg:flex"
           aria-label="Primary"
         >
           {primaryNav
@@ -45,8 +45,8 @@ export function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-[14.5px] font-medium tracking-[0.02em] transition-colors ${
-                    active ? "text-teal" : "text-mist/75 hover:text-mist"
+                  className={`text-[15px] font-medium tracking-[0.015em] transition-colors ${
+                    active ? "text-teal" : "text-mist/80 hover:text-mist"
                   }`}
                 >
                   {item.label}
@@ -60,14 +60,14 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-[14.5px] font-medium tracking-[0.02em] text-mist/65 transition-colors hover:text-mist"
+              className="text-[15px] font-medium tracking-[0.015em] text-mist/70 transition-colors hover:text-mist"
             >
               {item.label}
             </Link>
           ))}
           <Link
             href="/ripplepoint"
-            className="rounded-sm border border-teal/40 bg-teal/10 px-4 py-2.5 text-[14px] font-medium tracking-[0.01em] text-teal transition-colors hover:bg-teal/20"
+            className="rounded-sm border border-teal/45 bg-teal/10 px-4 py-2.5 text-[14.5px] font-medium tracking-[0.01em] text-teal transition-colors hover:bg-teal/20"
           >
             Explore RipplePoint
           </Link>
