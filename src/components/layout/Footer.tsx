@@ -8,7 +8,7 @@ export function Footer() {
     <footer className="border-t border-[rgba(232,236,244,0.08)] bg-[#090d1a]">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-[1.4fr_1fr_1fr] md:px-8">
         <div>
-          <Logo />
+          <Logo size="footer" />
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-muted">
             {brand.positioning}
           </p>

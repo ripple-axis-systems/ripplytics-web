@@ -7,36 +7,93 @@ export function SixDimensions() {
   const [active, setActive] = useState(0);
 
   return (
-    <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+    <div className="grid items-center gap-12 lg:grid-cols-[1fr_1fr]">
       <div className="relative mx-auto aspect-square w-full max-w-md" aria-hidden="true">
-        <div className="absolute inset-[12%] rounded-full border border-[rgba(232,236,244,0.1)]" />
-        <div className="absolute inset-[28%] rounded-full border border-teal/20" />
-        <div className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-teal" />
+        <svg viewBox="0 0 320 320" className="h-full w-full">
+          <defs>
+            <radialGradient id="dim-core" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor="#0FA88F" stopOpacity="0.2" />
+              <stop offset="100%" stopColor="#0FA88F" stopOpacity="0" />
+            </radialGradient>
+          </defs>
+          <circle cx="160" cy="160" r="130" fill="url(#dim-core)" />
+          <circle
+            cx="160"
+            cy="160"
+            r="108"
+            fill="none"
+            stroke="rgba(232,236,244,0.1)"
+            strokeWidth="1"
+          />
+          <circle
+            cx="160"
+            cy="160"
+            r="58"
+            fill="none"
+            stroke="rgba(15,168,143,0.28)"
+            strokeWidth="1.25"
+          />
+          <circle cx="160" cy="160" r="6" fill="#0FA88F" className="animate-node-pulse" />
+
+          {sixDimensions.map((dim, index) => {
+            const angle = (index / sixDimensions.length) * Math.PI * 2 - Math.PI / 2;
+            const x = 160 + Math.cos(angle) * 108;
+            const y = 160 + Math.sin(angle) * 108;
+            const selected = index === active;
+            const short = dim.label.replace("Systemic ", "");
+            return (
+              <g key={dim.id}>
+                <line
+                  x1="160"
+                  y1="160"
+                  x2={x}
+                  y2={y}
+                  stroke={selected ? "rgba(15,168,143,0.65)" : "rgba(232,236,244,0.12)"}
+                  strokeWidth={selected ? 1.5 : 1}
+                />
+                <circle
+                  cx={x}
+                  cy={y}
+                  r={selected ? 7 : 4.5}
+                  fill={selected ? "#0FA88F" : "#E8ECF4"}
+                  opacity={selected ? 1 : 0.7}
+                />
+                <text
+                  x={160 + Math.cos(angle) * 138}
+                  y={160 + Math.sin(angle) * 138 + 3}
+                  textAnchor="middle"
+                  fill={selected ? "#0FA88F" : "#9AA3B5"}
+                  fontSize="10"
+                  letterSpacing="0.06em"
+                  fontFamily="var(--font-body), sans-serif"
+                >
+                  {short.toUpperCase()}
+                </text>
+              </g>
+            );
+          })}
+        </svg>
+
+        {/* Invisible hit targets over nodes */}
         {sixDimensions.map((dim, index) => {
           const angle = (index / sixDimensions.length) * Math.PI * 2 - Math.PI / 2;
-          const x = 50 + Math.cos(angle) * 38;
-          const y = 50 + Math.sin(angle) * 38;
-          const selected = index === active;
+          const x = 50 + Math.cos(angle) * 33.75;
+          const y = 50 + Math.sin(angle) * 33.75;
           return (
             <button
-              key={dim.id}
+              key={`hit-${dim.id}`}
               type="button"
+              aria-label={dim.label}
               onClick={() => setActive(index)}
-              className={`absolute -translate-x-1/2 -translate-y-1/2 rounded-full border px-2.5 py-1 text-[10px] uppercase tracking-[0.12em] transition ${
-                selected
-                  ? "border-teal bg-teal/15 text-teal"
-                  : "border-white/15 bg-navy-elevated text-muted hover:text-mist"
-              }`}
+              className="absolute h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full"
               style={{ left: `${x}%`, top: `${y}%` }}
-            >
-              {dim.label.split(" ").pop()}
-            </button>
+            />
           );
         })}
       </div>
 
       <div>
-        <div className="grid gap-3 sm:grid-cols-2">
+        <div className="flex flex-wrap gap-2">
           {sixDimensions.map((dim, index) => {
             const selected = index === active;
             return (
@@ -44,22 +101,22 @@ export function SixDimensions() {
                 key={dim.id}
                 type="button"
                 onClick={() => setActive(index)}
-                className={`rounded-sm border p-4 text-left transition ${
+                className={`rounded-sm border px-3.5 py-2 text-sm transition ${
                   selected
-                    ? "border-teal/45 bg-teal/10"
-                    : "border-[rgba(232,236,244,0.1)] bg-white/[0.02] hover:border-[rgba(232,236,244,0.2)]"
+                    ? "border-teal/50 bg-teal/12 text-teal"
+                    : "border-[rgba(232,236,244,0.12)] text-muted hover:text-mist"
                 }`}
               >
-                <p className="font-display text-lg text-off-white">{dim.label}</p>
+                {dim.label}
               </button>
             );
           })}
         </div>
-        <div className="mt-6 rounded-sm border border-[rgba(232,236,244,0.12)] bg-navy-elevated/60 p-5">
-          <p className="text-[11px] uppercase tracking-[0.18em] text-teal">
+        <div className="mt-8 border-l-2 border-teal/50 pl-5">
+          <p className="font-display text-2xl text-off-white md:text-3xl">
             {sixDimensions[active].label}
           </p>
-          <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">
+          <p className="mt-4 max-w-md text-base leading-relaxed text-muted">
             {sixDimensions[active].body}
           </p>
         </div>

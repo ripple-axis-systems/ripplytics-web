@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { ConnectionChain } from "@/components/visuals/ConnectionChain";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
@@ -9,16 +10,6 @@ export const metadata: Metadata = pageMetadata({
     "Ripplytics was created around a simple belief: understanding risk requires understanding the relationships around it.",
   path: "/about",
 });
-
-const chain = [
-  "Geopolitics",
-  "Commodities",
-  "Inflation",
-  "Policy",
-  "Rates / Currency",
-  "Markets",
-  "Businesses / Portfolios",
-];
 
 const disciplines = [
   "Risk Intelligence",
@@ -42,15 +33,13 @@ const principles = [
 export default function AboutPage() {
   return (
     <div className="bg-atmosphere">
-      <section className="mx-auto max-w-7xl px-5 pb-16 pt-32 md:px-8 md:pb-24 md:pt-40">
+      <section className="mx-auto max-w-7xl px-5 pb-16 pt-36 md:px-8 md:pb-24 md:pt-44">
         <Reveal>
           <h1 className="max-w-4xl font-display text-4xl leading-tight text-off-white md:text-6xl">
             The world became interconnected. Risk did too.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            But our tools for understanding it have often remained fragmented. Ripplytics was
-            created around a simple belief: understanding risk requires understanding the
-            relationships around it.
+            Understanding risk requires understanding the relationships around it.
           </p>
         </Reveal>
       </section>
@@ -59,12 +48,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading title="We started with a question.">
-              <p>What if we stopped looking at risk only as an event?</p>
-              <p>What if we followed it?</p>
-              <p>
-                Back to its origin. Across its connections. Through its transmission pathways. Into
-                the systems that may be exposed. And finally toward the consequences it may create.
-              </p>
+              <p>What if we stopped looking at risk only as an event — and followed it instead?</p>
             </SectionHeading>
           </Reveal>
         </div>
@@ -80,19 +64,8 @@ export default function AboutPage() {
               </p>
             </SectionHeading>
           </Reveal>
-          <div className="mt-12 flex flex-col gap-3 md:max-w-xl">
-            {chain.map((node, index) => (
-              <Reveal key={node} delay={index * 50}>
-                <div className="rounded-sm border border-[rgba(232,236,244,0.12)] bg-white/[0.02] px-5 py-4">
-                  <p className="font-display text-lg text-off-white">{node}</p>
-                </div>
-                {index < chain.length - 1 ? (
-                  <p className="py-1 pl-5 text-teal/60" aria-hidden="true">
-                    ↓
-                  </p>
-                ) : null}
-              </Reveal>
-            ))}
+          <div className="mt-12">
+            <ConnectionChain />
           </div>
         </div>
       </section>
@@ -102,22 +75,26 @@ export default function AboutPage() {
           <Reveal>
             <SectionHeading title="A new generation of risk intelligence.">
               <p>
-                Ripplytics is developing intelligence products that help people understand complex
-                environments through a connected lens. These are not separate disciplines inside
-                our thinking — they are different views of an interconnected system.
+                Different views of an interconnected system — not separate disciplines inside our
+                thinking.
               </p>
             </SectionHeading>
           </Reveal>
-          <div className="mt-12 flex flex-wrap gap-3">
-            {disciplines.map((item) => (
-              <span
-                key={item}
-                className="rounded-sm border border-[rgba(232,236,244,0.12)] px-4 py-2 text-sm text-mist/85"
-              >
-                {item}
-              </span>
-            ))}
-          </div>
+          <Reveal delay={80}>
+            <div className="mt-12 flex flex-wrap gap-x-6 gap-y-3">
+              {disciplines.map((item, index) => (
+                <span key={item} className="inline-flex items-center gap-3 text-sm text-mist/85">
+                  <span className="h-1.5 w-1.5 rounded-full bg-teal/70" aria-hidden="true" />
+                  {item}
+                  {index < disciplines.length - 1 ? (
+                    <span className="hidden text-white/15 sm:inline" aria-hidden="true">
+                      ·
+                    </span>
+                  ) : null}
+                </span>
+              ))}
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -127,21 +104,24 @@ export default function AboutPage() {
             <SectionHeading title="More information is not necessarily more intelligence.">
               <p>
                 Ripplytics is interested in the layer between information and decision — where
-                signals acquire context, relationships become visible, transmission can be
-                examined, exposure and absorption matter, and uncertainty is acknowledged.
+                signals acquire context and relationships become visible.
               </p>
             </SectionHeading>
           </Reveal>
           <Reveal delay={80}>
-            <div className="mt-10 flex flex-wrap gap-2 text-sm text-muted">
-              {["Information", "Context", "Relationships", "Interpretation", "Decision"].map(
-                (step, index) => (
-                  <span key={step} className="inline-flex items-center gap-2">
-                    <span className="rounded-sm border border-teal/25 px-3 py-2 text-teal">{step}</span>
-                    {index < 4 ? <span className="text-white/20">→</span> : null}
-                  </span>
-                ),
-              )}
+            <div className="mt-12 overflow-hidden rounded-sm border border-[rgba(232,236,244,0.1)] bg-white/[0.02] px-5 py-8 md:px-8">
+              <div className="flex flex-wrap items-center gap-2 text-sm md:gap-3 md:text-base">
+                {["Information", "Context", "Relationships", "Interpretation", "Decision"].map(
+                  (step, index) => (
+                    <span key={step} className="inline-flex items-center gap-2 md:gap-3">
+                      <span className="rounded-sm border border-teal/30 bg-teal/5 px-3 py-2 text-teal">
+                        {step}
+                      </span>
+                      {index < 4 ? <span className="text-teal/40">→</span> : null}
+                    </span>
+                  ),
+                )}
+              </div>
             </div>
           </Reveal>
         </div>
@@ -163,20 +143,18 @@ export default function AboutPage() {
 
       <section className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <div className="space-y-8">
+          <div className="space-y-0">
             {principles.map((item, index) => (
               <Reveal key={item.title} delay={index * 40}>
-                <div className="border-t border-[rgba(232,236,244,0.1)] pt-8">
-                  <h3 className="font-display text-2xl uppercase tracking-[0.04em] text-off-white md:text-3xl">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 text-muted">{item.body}</p>
+                <div className="grid gap-2 border-t border-[rgba(232,236,244,0.1)] py-8 md:grid-cols-[1.2fr_1fr] md:items-baseline md:gap-10">
+                  <h3 className="font-display text-2xl text-off-white md:text-3xl">{item.title}</h3>
+                  <p className="text-muted md:text-lg">{item.body}</p>
                 </div>
               </Reveal>
             ))}
           </div>
           <Reveal>
-            <p className="mt-16 font-display text-2xl text-teal">Understand the Ripple.</p>
+            <p className="mt-12 font-display text-2xl text-teal">Understand the Ripple.</p>
           </Reveal>
         </div>
       </section>

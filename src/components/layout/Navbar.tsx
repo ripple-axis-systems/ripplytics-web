@@ -26,14 +26,17 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-b border-[rgba(232,236,244,0.08)] bg-[rgba(11,15,31,0.86)] backdrop-blur-md py-3"
-          : "bg-transparent py-5"
+          ? "border-b border-[rgba(232,236,244,0.08)] bg-[rgba(11,15,31,0.9)] backdrop-blur-md py-3.5"
+          : "bg-transparent py-6"
       }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 md:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-8 px-5 md:px-8">
         <Logo />
 
-        <nav className="hidden items-center gap-6 lg:flex" aria-label="Primary">
+        <nav
+          className="hidden items-center gap-8 xl:gap-9 lg:flex"
+          aria-label="Primary"
+        >
           {primaryNav
             .filter((item) => item.href !== "/")
             .map((item) => {
@@ -42,8 +45,8 @@ export function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`text-[13px] tracking-wide transition-colors ${
-                    active ? "text-teal" : "text-muted hover:text-mist"
+                  className={`text-[14.5px] font-medium tracking-[0.02em] transition-colors ${
+                    active ? "text-teal" : "text-mist/75 hover:text-mist"
                   }`}
                 >
                   {item.label}
@@ -52,19 +55,19 @@ export function Navbar() {
             })}
         </nav>
 
-        <div className="hidden items-center gap-4 lg:flex">
+        <div className="hidden items-center gap-5 lg:flex">
           {secondaryNav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-[13px] text-muted transition-colors hover:text-mist"
+              className="text-[14.5px] font-medium tracking-[0.02em] text-mist/65 transition-colors hover:text-mist"
             >
               {item.label}
             </Link>
           ))}
           <Link
             href="/ripplepoint"
-            className="rounded-sm border border-teal/40 bg-teal/10 px-3.5 py-2 text-[13px] font-medium text-teal transition-colors hover:bg-teal/20"
+            className="rounded-sm border border-teal/40 bg-teal/10 px-4 py-2.5 text-[14px] font-medium tracking-[0.01em] text-teal transition-colors hover:bg-teal/20"
           >
             Explore RipplePoint
           </Link>
@@ -72,7 +75,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="inline-flex h-10 w-10 items-center justify-center rounded-sm border border-[rgba(232,236,244,0.16)] text-mist lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[rgba(232,236,244,0.16)] text-mist lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -80,9 +83,13 @@ export function Navbar() {
         >
           <span className="sr-only">Menu</span>
           <div className="flex w-4 flex-col gap-1.5">
-            <span className={`h-px w-full bg-current transition ${open ? "translate-y-[3.5px] rotate-45" : ""}`} />
+            <span
+              className={`h-px w-full bg-current transition ${open ? "translate-y-[3.5px] rotate-45" : ""}`}
+            />
             <span className={`h-px w-full bg-current transition ${open ? "opacity-0" : ""}`} />
-            <span className={`h-px w-full bg-current transition ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`} />
+            <span
+              className={`h-px w-full bg-current transition ${open ? "-translate-y-[3.5px] -rotate-45" : ""}`}
+            />
           </div>
         </button>
       </div>
@@ -97,12 +104,12 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-base ${pathname === item.href ? "text-teal" : "text-mist"}`}
+                className={`text-lg ${pathname === item.href ? "text-teal" : "text-mist"}`}
               >
                 {item.label}
               </Link>
             ))}
-            <Link href="/ripplepoint" className="mt-2 text-teal">
+            <Link href="/ripplepoint" className="mt-2 text-lg text-teal">
               Explore RipplePoint
             </Link>
           </nav>

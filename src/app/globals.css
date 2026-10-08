@@ -82,6 +82,13 @@ a {
     linear-gradient(180deg, #0b0f1f 0%, #0e1426 45%, #0b0f1f 100%);
 }
 
+/* Soft grid under figures — atmosphere, not decoration overload */
+.figure-panel {
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(15, 168, 143, 0.08), transparent 65%),
+    linear-gradient(180deg, rgba(18, 24, 43, 0.75), rgba(11, 15, 31, 0.35));
+}
+
 .bg-section-soft {
   background:
     linear-gradient(180deg, rgba(18, 24, 43, 0.55), rgba(11, 15, 31, 0.2)),
