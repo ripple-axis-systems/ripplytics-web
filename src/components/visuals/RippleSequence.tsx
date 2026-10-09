@@ -63,36 +63,37 @@ export function RippleSequence() {
         </div>
 
         {/* Annotated figure + copy for selected stage */}
-        <div className="flex flex-col p-5 md:p-7 lg:p-8" role="tabpanel">
-          <div className="mb-5">
-            <p className="text-[11px] uppercase tracking-[0.18em] text-teal">
-              Stage {String(active + 1).padStart(2, "0")} · {current.label}
-            </p>
-            <h3 className="mt-2 font-display text-2xl text-off-white md:text-3xl">
-              {current.question}
-            </h3>
-            <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted md:text-base">
-              {current.body}
-            </p>
-          </div>
+        <div className="flex flex-col p-5 md:p-6 lg:p-7" role="tabpanel">
+          <p className="text-[11px] uppercase tracking-[0.18em] text-teal">
+            Stage {String(active + 1).padStart(2, "0")} · {current.label}
+          </p>
+          <h3 className="mt-2 font-display text-xl text-off-white md:text-2xl">
+            {current.question}
+          </h3>
+          <p className="mt-2 max-w-xl text-sm leading-relaxed text-muted">
+            {current.body}
+          </p>
 
-          <div className="mt-auto overflow-hidden rounded-sm border border-[rgba(232,236,244,0.08)] bg-[rgba(11,15,31,0.45)] px-2 py-3 md:px-4 md:py-4">
+          {/* Figure is the primary surface — no nested empty card */}
+          <div className="mt-4 -mx-1 md:mt-5">
             <StageFigure index={active} />
           </div>
 
-          <div className="mt-5 flex flex-wrap gap-1.5" aria-hidden="true">
-            {rippleSequence.map((step, index) => (
-              <span
-                key={step.id}
-                className={`h-1 w-7 rounded-full transition-colors ${
-                  index <= active ? "bg-teal" : "bg-white/10"
-                }`}
-              />
-            ))}
+          <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">
+            <div className="flex flex-wrap gap-1.5" aria-hidden="true">
+              {rippleSequence.map((step, index) => (
+                <span
+                  key={step.id}
+                  className={`h-1 w-7 rounded-full transition-colors ${
+                    index <= active ? "bg-teal" : "bg-white/10"
+                  }`}
+                />
+              ))}
+            </div>
+            <p className="text-xs leading-relaxed text-muted/75">
+              Annotated schematic — educational lens, not a live RipplePoint output.
+            </p>
           </div>
-          <p className="mt-3 text-xs leading-relaxed text-muted/75">
-            Annotated schematic — educational lens, not a live RipplePoint output.
-          </p>
         </div>
       </div>
     </div>
