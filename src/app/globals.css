@@ -189,8 +189,8 @@ a {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -5px;
-  height: 1px;
+  bottom: -6px;
+  height: 1.5px;
   background: var(--teal);
   transform: scaleX(0);
   transform-origin: left center;

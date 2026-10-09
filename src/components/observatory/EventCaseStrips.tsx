@@ -1,5 +1,9 @@
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import {
+  episodePathHighlights,
+  MiniPathSchematic,
+} from "@/components/visuals/MiniPathSchematic";
 import { ILLUSTRATIVE_DISCLAIMER, realWorldEpisodes } from "@/lib/content";
 
 const fields = [
@@ -30,9 +34,15 @@ export function EventCaseStrips() {
           {realWorldEpisodes.map((ep, index) => (
             <Reveal key={ep.id} delay={index * 40}>
               <article className="border-t border-[rgba(232,236,244,0.12)] pt-10">
-                <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
-                  <p className="text-[11px] uppercase tracking-[0.18em] text-teal">{ep.period}</p>
-                  <h3 className="font-display text-2xl text-off-white md:text-3xl">{ep.title}</h3>
+                <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-4">
+                  <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
+                    <p className="text-[11px] uppercase tracking-[0.18em] text-teal">{ep.period}</p>
+                    <h3 className="font-display text-2xl text-off-white md:text-3xl">{ep.title}</h3>
+                  </div>
+                  <MiniPathSchematic
+                    highlight={episodePathHighlights[ep.id] ?? [0, 4]}
+                    className="shrink-0 opacity-90"
+                  />
                 </div>
 
                 <div className="mt-8 grid gap-8 md:grid-cols-2">

@@ -34,7 +34,7 @@ export function Navbar() {
         <Logo className="nav-logo-link" />
 
         <nav
-          className="hidden items-center gap-7 xl:gap-8 lg:flex"
+          className="hidden items-center gap-6 xl:gap-7 lg:flex"
           aria-label="Primary"
         >
           {primaryNav
@@ -45,8 +45,8 @@ export function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`nav-link text-[15px] font-medium tracking-[0.015em] ${
-                    active ? "is-active text-teal" : "text-mist/80"
+                  className={`nav-link text-[17.5px] font-medium tracking-[0.01em] xl:text-[18px] ${
+                    active ? "is-active text-teal" : "text-mist/85"
                   }`}
                 >
                   {item.label}
@@ -60,14 +60,14 @@ export function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="nav-link text-[15px] font-medium tracking-[0.015em] text-mist/70"
+              className="nav-link text-[17.5px] font-medium tracking-[0.01em] text-mist/75 xl:text-[18px]"
             >
               {item.label}
             </Link>
           ))}
           <Link
             href="/ripplepoint"
-            className="rounded-sm border border-teal/45 bg-teal/10 px-4 py-2.5 text-[14.5px] font-medium tracking-[0.01em] text-teal transition-colors hover:bg-teal/20"
+            className="rounded-sm border border-teal/45 bg-teal/10 px-4 py-2.5 text-[15.5px] font-medium tracking-[0.01em] text-teal transition-colors hover:bg-teal/20"
           >
             Explore RipplePoint
           </Link>
@@ -104,12 +104,12 @@ export function Navbar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`text-lg ${pathname === item.href ? "text-teal" : "text-mist"}`}
+                className={`text-[1.3125rem] font-medium tracking-[0.01em] ${pathname === item.href ? "text-teal" : "text-mist"}`}
               >
                 {item.label}
               </Link>
             ))}
-            <Link href="/ripplepoint" className="mt-2 text-lg text-teal">
+            <Link href="/ripplepoint" className="mt-2 text-[1.3125rem] font-medium text-teal">
               Explore RipplePoint
             </Link>
           </nav>

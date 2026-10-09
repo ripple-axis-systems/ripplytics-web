@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import {
+  episodePathHighlights,
+  MiniPathSchematic,
+} from "@/components/visuals/MiniPathSchematic";
 import { ILLUSTRATIVE_DISCLAIMER, realWorldEpisodes } from "@/lib/content";
 
 export function RealWorldRipples() {
@@ -24,6 +28,11 @@ export function RealWorldRipples() {
                 <h3 className="mt-3 font-display text-xl leading-snug text-off-white md:text-[1.35rem]">
                   {ep.title}
                 </h3>
+                <div className="mt-4">
+                  <MiniPathSchematic
+                    highlight={episodePathHighlights[ep.id] ?? [0, 4]}
+                  />
+                </div>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-muted">{ep.teaser}</p>
                 <p className="mt-5 text-[11px] leading-relaxed text-muted/65">
                   {ILLUSTRATIVE_DISCLAIMER}
