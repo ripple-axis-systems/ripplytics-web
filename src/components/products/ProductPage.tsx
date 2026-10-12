@@ -14,9 +14,14 @@ export function ProductPage({ product }: { product: Product }) {
             {product.category}
           </p>
           <h1 className="mt-4 max-w-4xl font-display text-4xl leading-[1.08] text-off-white md:text-6xl">
-            {product.tagline}
+            {product.outcome}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">{product.description}</p>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-mist/90">{product.question}</p>
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">{product.description}</p>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-muted">
+            <span className="text-teal">Deliverable: </span>
+            {product.deliverable}
+          </p>
           <div className="mt-8">
             <Button href={product.cta.href} variant={product.available ? "primary" : "secondary"}>
               {product.cta.label}
@@ -38,7 +43,8 @@ export function ProductPage({ product }: { product: Product }) {
               {!product.available ? (
                 <p className="text-sm text-muted">
                   This page describes intent and direction. Visualisations below are conceptual
-                  and labelled as such — not product screenshots.
+                  and labelled as such — not product screenshots. Availability:{" "}
+                  {product.status === "in-development" ? "concept" : "under development"}.
                 </p>
               ) : null}
             </SectionHeading>

@@ -53,8 +53,9 @@ export function ProductEcosystem() {
 
         <div className="relative">
           <StatusBadge status={primary.status} />
-          <h3 className="mt-5 font-display text-3xl text-off-white md:text-4xl">{primary.name}</h3>
-          <p className="mt-2 text-sm uppercase tracking-[0.14em] text-teal/90">{primary.category}</p>
+          <p className="mt-5 text-[11px] uppercase tracking-[0.16em] text-teal/80">01 · Live outcome</p>
+          <h3 className="mt-2 font-display text-3xl text-off-white md:text-4xl">{primary.name}</h3>
+          <p className="mt-2 text-sm uppercase tracking-[0.14em] text-teal/90">{primary.outcome}</p>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted">{primary.description}</p>
         </div>
         <span className="relative mt-10 inline-flex text-sm text-teal transition group-hover:translate-x-1">
@@ -84,12 +85,12 @@ export function ProductEcosystem() {
                   {product.name}
                 </h3>
                 <p className="mt-1 text-xs uppercase tracking-[0.12em] text-muted">
-                  {product.category}
+                  {product.outcome}
                 </p>
               </div>
               <StatusBadge status={product.status} />
             </div>
-            <p className="mt-2 text-sm leading-relaxed text-muted">{product.tagline}</p>
+            <p className="mt-2 text-sm leading-relaxed text-muted">{product.question}</p>
           </Link>
         ))}
       </div>

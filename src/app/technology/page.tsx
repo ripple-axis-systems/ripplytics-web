@@ -83,8 +83,9 @@ export default function TechnologyPage() {
           <Reveal>
             <SectionHeading title="Models & indices">
               <p>
-                These components are part of a broader intelligence architecture. They should not
-                be interpreted as standalone predictions.
+                Names below match engines live in RipplePoint Beta. They are components of a
+                broader intelligence architecture — not standalone predictions, forecasts or trade
+                advice.
               </p>
             </SectionHeading>
           </Reveal>

@@ -25,8 +25,9 @@ export default function HowWeThinkPage() {
             <span className="mt-3 block text-teal">We start with the ripple.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            The intelligence challenge begins when we ask what happens after the event enters a
-            connected system.
+            This is the intellectual differentiator behind Ripplytics products. The intelligence
+            challenge begins when we ask what happens after the event enters a connected system —
+            and how that view helps decisions, starting with RipplePoint Live Beta.
           </p>
         </Reveal>
       </section>

@@ -94,12 +94,48 @@ export const architectureLayers = [
   { id: "decision", label: "Decision Intelligence", body: "Present complex relationships in a form that supports human judgement." },
 ] as const;
 
+/** Names aligned to live RipplePoint engines — educational Technology page, not a full product catalog. */
 export const models = [
-  { acronym: "GCPI", name: "Global Crash Probability Index", purpose: "A component within the broader architecture for assessing systemic crash risk conditions." },
-  { acronym: "GFSI", name: "Geopolitical Fracture Stress Index", purpose: "Interprets geopolitical fracture and stress within a connected risk framework." },
-  { acronym: "SSI", name: "Stress Sync Index", purpose: "Examines synchronisation of stress across related systems." },
-  { acronym: "GRCI", name: "Global Regime Confidence Index", purpose: "Supports interpretation of broader regime conditions and confidence around them." },
-  { acronym: "TRM", name: "Trigger Ripple Model", purpose: "Explores how triggers may propagate through connected pathways." },
+  {
+    acronym: "GCPI",
+    name: "Global Conditions Pressure Index",
+    purpose: "Macro conditions / pressure scoring used in RipplePoint Live Beta (RASS-03).",
+  },
+  {
+    acronym: "GFSI",
+    name: "Global Fragility & Shock Index",
+    purpose: "Fragility and shock field within a connected risk framework (Live Beta).",
+  },
+  {
+    acronym: "GRCI",
+    name: "Global Recovery Confirmation Index",
+    purpose: "Recovery-conditions interpretation alongside regime context (Live Beta).",
+  },
+  {
+    acronym: "SSI",
+    name: "Systemic Stability Intelligence",
+    purpose: "Reasoning layer across pillars — feeds operational alert policy (Live Beta).",
+  },
+  {
+    acronym: "TRI",
+    name: "Transmission & Ripple Intelligence",
+    purpose: "Transmission pathways and residual ripple — including Ripple Field (Live Beta).",
+  },
+  {
+    acronym: "EII",
+    name: "Evidence Integrity Intelligence",
+    purpose: "Assurance / evidence-integrity layer for platform and country views (Live Beta).",
+  },
+  {
+    acronym: "MASI",
+    name: "Market Absorptive Strength Intelligence",
+    purpose: "Absorption strength and horizons — methodology views, not predicted loss (Live Beta).",
+  },
+  {
+    acronym: "ACI",
+    name: "Adaptive Capacity Intelligence",
+    purpose: "Structural / adaptive capacity (Domain III; quarterly SCP) in Live Beta.",
+  },
 ] as const;
 
 export const observatoryCategories = [

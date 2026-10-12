@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   ...pageMetadata({
     title: brand.name,
     description:
-      "Ripplytics develops risk intelligence solutions designed to understand how events connect, propagate, create exposure and influence decisions.",
+      "Ripplytics builds risk and decision-intelligence applications for investors and analysts — with RipplePoint Live Beta for connected global risk context.",
     path: "/",
   }),
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || brand.siteUrl),

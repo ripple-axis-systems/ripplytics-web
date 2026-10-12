@@ -9,7 +9,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "The Ripplytics Observatory",
   description:
-    "The research and insight layer of the Ripplytics ecosystem — examining emerging risks, regimes, systemic relationships and intelligence methodologies.",
+    "Research examples and insight layer — tangible illustrations of connected risk thinking that support Ripplytics products.",
   path: "/observatory",
 });
 
@@ -33,9 +33,9 @@ export default function ObservatoryPage() {
             <span className="mt-3 block text-teal">We want to understand which ones matter.</span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            The Ripplytics Observatory is the research and insight layer of the Ripplytics
-            ecosystem. It is where we examine emerging risks, changing regimes, systemic
-            relationships and the ideas behind our intelligence models.
+            Tangible research examples as proof of connected-risk thinking. The Observatory
+            examines emerging risks, changing regimes, systemic relationships and the ideas behind
+            Ripplytics intelligence models — supporting products, not replacing them.
           </p>
         </Reveal>
       </section>

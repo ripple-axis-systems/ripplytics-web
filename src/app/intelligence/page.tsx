@@ -20,8 +20,9 @@ export default function IntelligencePage() {
             Behind every Ripplytics application is a common way of thinking.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            Different products solve different problems. The underlying intelligence architecture
-            seeks to understand the movement of risk across systems.
+            Depth for visitors who want the system view. Different products solve different
+            decision problems; the underlying architecture seeks to understand how risk moves
+            across systems — with RipplePoint as the live proof today.
           </p>
         </Reveal>
       </section>

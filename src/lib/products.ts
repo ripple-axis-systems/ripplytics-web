@@ -4,8 +4,14 @@ export type Product = {
   name: string;
   slug: string;
   category: string;
+  /** Customer outcome this product addresses */
+  outcome: string;
+  /** Customer question the product answers */
+  question: string;
   tagline: string;
   description: string;
+  /** Honest deliverable within real scope */
+  deliverable: string;
   status: ProductStatus;
   available: boolean;
   cta: { label: string; href: string };
@@ -16,8 +22,8 @@ export type Product = {
 
 export const statusLabels: Record<ProductStatus, string> = {
   "live-beta": "Live Beta",
-  "coming-soon": "Coming Soon",
-  "in-development": "In Development",
+  "coming-soon": "Under development",
+  "in-development": "Concept",
 };
 
 export const products: Product[] = [
@@ -25,9 +31,13 @@ export const products: Product[] = [
     name: "RipplePoint",
     slug: "ripplepoint",
     category: "Global Risk & Macro Intelligence",
+    outcome: "Understand the global risk environment",
+    question: "What is the state of global risk — and where might pressure travel next?",
     tagline: "See beyond the first movement.",
     description:
-      "Understand emerging global risks, their origins, their potential connections and their significance within the wider macro environment.",
+      "A Live Beta application for reading global conditions, connected signals and transmission pathways — so investors and analysts can see risk in context, not as isolated headlines.",
+    deliverable:
+      "Credentialed dashboard: system signal and briefing, pillar scores (GCPI, GFSI, GRCI), SSI reasoning and operational alerts, TRI / Ripple Field transmission, MASI absorption, EII / ACI evidence, and a 19-country lens — diagnostic conditions intelligence, not forecasts or trade advice.",
     status: "live-beta",
     available: true,
     cta: { label: "Explore RipplePoint", href: "/ripplepoint" },
@@ -35,15 +45,19 @@ export const products: Product[] = [
     problem:
       "The headline is rarely the whole story. A geopolitical event may appear in the news — but what happens after it?",
     philosophy:
-      "RipplePoint is designed to help users move from event awareness to connected risk understanding.",
+      "RipplePoint helps users move from event awareness to connected risk understanding — within the scope of what is live in beta today.",
   },
   {
     name: "Portfolio Health Engine",
     slug: "portfolio-health-engine",
     category: "Portfolio Risk Intelligence",
+    outcome: "Portfolio health & market conditions",
+    question: "How healthy is this portfolio under connected market pressure?",
     tagline: "A portfolio is more than a collection of positions.",
     description:
-      "Portfolio Health Engine is being developed to provide a structured view of portfolio health, strength and systemic risk.",
+      "Intended to give a structured view of portfolio health, strength and systemic risk when market conditions shift together.",
+    deliverable:
+      "Planned: portfolio-level health and resilience views. Not available in Live Beta.",
     status: "coming-soon",
     available: false,
     cta: { label: "Register Interest", href: "/contact?interest=Portfolio+Intelligence" },
@@ -57,9 +71,13 @@ export const products: Product[] = [
     name: "EchoPulse",
     slug: "echopulse",
     category: "Market Structure Intelligence",
+    outcome: "Portfolio health & market conditions",
+    question: "What is changing in market structure before the broader picture is obvious?",
     tagline: "Markets leave traces before conditions become obvious.",
     description:
-      "EchoPulse is being developed to identify and interpret changes in market structure, momentum, pressure and participation.",
+      "Intended to identify and interpret changes in market structure, momentum, pressure and participation.",
+    deliverable:
+      "Planned: market-structure and participation intelligence. Not available in Live Beta.",
     status: "coming-soon",
     available: false,
     cta: { label: "Register Interest", href: "/contact?interest=Market+Intelligence" },
@@ -73,9 +91,13 @@ export const products: Product[] = [
     name: "RippleAudit",
     slug: "rippleaudit",
     category: "Business Risk Intelligence",
+    outcome: "Business vulnerabilities",
+    question: "Where is this business exposed when external pressure arrives?",
     tagline: "The visible numbers are only part of a business.",
     description:
-      "RippleAudit is being developed to examine structural, operational and strategic dimensions of business risk.",
+      "Intended to examine structural, operational and strategic dimensions of business risk beneath surface performance.",
+    deliverable:
+      "Planned: business vulnerability and exposure views. Not available in Live Beta.",
     status: "coming-soon",
     available: false,
     cta: { label: "Register Interest", href: "/contact?interest=Business+Risk" },
@@ -89,9 +111,13 @@ export const products: Product[] = [
     name: "Pulse Tracker",
     slug: "pulse-tracker",
     category: "Signal Discovery & Surveillance",
+    outcome: "Discover / follow emerging signals",
+    question: "Which emerging signals deserve attention before they become obvious?",
     tagline: "There are more signals than anyone can watch manually.",
     description:
-      "Pulse Tracker is being developed to discover and track signals that may warrant deeper investigation.",
+      "Intended to discover and track signals that may warrant deeper investigation.",
+    deliverable:
+      "Planned: signal discovery and tracking. Not available in Live Beta.",
     status: "coming-soon",
     available: false,
     cta: { label: "Register Interest", href: "/contact?interest=Other" },
@@ -105,9 +131,13 @@ export const products: Product[] = [
     name: "RippleTrace",
     slug: "rippletrace",
     category: "Execution Intelligence",
+    outcome: "Discover / follow emerging signals",
+    question: "How do signals become decisions, actions and outcomes?",
     tagline: "Between a signal and an outcome lies a chain of decisions.",
     description:
-      "RippleTrace is an evolving concept for understanding how signals translate into decisions, actions and market outcomes.",
+      "An evolving concept for understanding how signals translate into decisions, actions and market outcomes.",
+    deliverable:
+      "Concept stage — direction only; not a product surface today.",
     status: "in-development",
     available: false,
     cta: { label: "Discuss the Concept", href: "/contact?interest=Other" },
@@ -118,6 +148,42 @@ export const products: Product[] = [
       "Follow the path from signal to action and understand how decisions, transactions and market movements connect.",
   },
 ];
+
+/** Homepage / Applications outcome groups — customer problem first. */
+export const outcomeGroups = [
+  {
+    id: "global-risk",
+    number: "01",
+    title: "Understand the global risk environment",
+    availability: "Live Beta" as const,
+    products: ["ripplepoint"],
+    prominent: true,
+  },
+  {
+    id: "portfolio-market",
+    number: "02",
+    title: "Portfolio health & market conditions",
+    availability: "Under development" as const,
+    products: ["portfolio-health-engine", "echopulse"],
+    prominent: false,
+  },
+  {
+    id: "business",
+    number: "03",
+    title: "Business vulnerabilities",
+    availability: "Under development" as const,
+    products: ["rippleaudit"],
+    prominent: false,
+  },
+  {
+    id: "signals",
+    number: "04",
+    title: "Discover / follow emerging signals",
+    availability: "Under development / concept" as const,
+    products: ["pulse-tracker", "rippletrace"],
+    prominent: false,
+  },
+] as const;
 
 export function getProduct(slug: string): Product | undefined {
   return products.find((p) => p.slug === slug);

@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "About",
   description:
-    "Ripplytics was created around a simple belief: understanding risk requires understanding the relationships around it.",
+    "Ripplytics builds risk and decision-intelligence applications so investors, analysts and businesses can see connected risk — starting with RipplePoint Live Beta.",
   path: "/about",
 });
 
@@ -39,7 +39,14 @@ export default function AboutPage() {
             The world became interconnected. Risk did too.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            Understanding risk requires understanding the relationships around it.
+            Ripplytics is a company building risk and decision-intelligence applications —
+            helping investors, analysts and businesses see connected risk more clearly than
+            headlines and isolated indicators allow.
+          </p>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-mist/80">
+            Our primary live product is RipplePoint (Live Beta). Other applications for portfolio,
+            market, business and signal environments are in development. The long-term vision is
+            connected intelligence across those domains — ambition, not a claim about today.
           </p>
         </Reveal>
       </section>
@@ -48,7 +55,10 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading title="We started with a question.">
-              <p>What if we stopped looking at risk only as an event — and followed it instead?</p>
+              <p>
+                What if we stopped looking at risk only as an event — and followed how pressure
+                connects and where consequence may travel?
+              </p>
             </SectionHeading>
           </Reveal>
         </div>
