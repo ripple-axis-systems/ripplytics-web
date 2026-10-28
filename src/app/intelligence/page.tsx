@@ -20,9 +20,9 @@ export default function IntelligencePage() {
             Behind every Ripplytics application is a common way of thinking.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            Depth for visitors who want the system view. Different products solve different
-            decision problems; the underlying architecture seeks to understand how risk moves
-            across systems — with RipplePoint as the live proof today.
+            Depth for visitors who want the system view. Different applications solve different
+            problems; the underlying architecture seeks to understand how risk moves across systems
+            — and how that movement informs the decision still ahead.
           </p>
         </Reveal>
       </section>
@@ -54,8 +54,9 @@ export default function IntelligencePage() {
               <span className="mt-3 block text-teal">Intelligence seeks to understand what it means.</span>
             </h2>
             <p className="mt-6 text-muted">
-              Don't simply show the signal — show its significance. Don't simply show the risk —
-              show its potential reach. Don't simply show the exposure — show the context around it.
+              Don&apos;t simply show the signal — show its significance. Don&apos;t simply show the
+              risk — show its potential reach. Don&apos;t simply show the exposure — show the context
+              around it.
             </p>
           </Reveal>
         </div>

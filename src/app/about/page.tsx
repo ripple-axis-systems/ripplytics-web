@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "About",
   description:
-    "Ripplytics builds risk and decision-intelligence applications so investors, analysts and businesses can see connected risk — starting with RipplePoint Live Beta.",
+    "Ripplytics builds risk and decision-intelligence applications so investors, analysts and businesses can see connected risk more clearly.",
   path: "/about",
 });
 
@@ -30,6 +30,30 @@ const principles = [
   { title: "Improve the decision.", body: "The purpose of intelligence is ultimately practical." },
 ];
 
+const teamPlaceholders = [
+  {
+    name: "Name",
+    role: "Role",
+    bio: "Short bio placeholder — founder will supply details.",
+  },
+  {
+    name: "Name",
+    role: "Role",
+    bio: "Short bio placeholder — founder will supply details.",
+  },
+  {
+    name: "Name",
+    role: "Role",
+    bio: "Short bio placeholder — founder will supply details.",
+  },
+];
+
+const connectPlaceholders = [
+  { label: "LinkedIn", href: null },
+  { label: "X", href: null },
+  { label: "Other", href: null },
+];
+
 export default function AboutPage() {
   return (
     <div className="bg-atmosphere">
@@ -44,9 +68,9 @@ export default function AboutPage() {
             headlines and isolated indicators allow.
           </p>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-mist/80">
-            Our primary live product is RipplePoint (Live Beta). Other applications for portfolio,
-            market, business and signal environments are in development. The long-term vision is
-            connected intelligence across those domains — ambition, not a claim about today.
+            RipplePoint is available as Live Beta. Deep R&amp;D is in heavy progress toward
+            launching more risk-intelligence applications across the suite. The long-term vision
+            is connected intelligence across domains — ambition, not a claim about today.
           </p>
         </Reveal>
       </section>
@@ -105,6 +129,65 @@ export default function AboutPage() {
               ))}
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      <section id="team" className="scroll-mt-24 py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal>
+            <SectionHeading eyebrow="Team" title="Leadership.">
+              <p>
+                Profiles will appear here as the founding team is published. Slots below are
+                placeholders until names, roles and bios are supplied.
+              </p>
+            </SectionHeading>
+          </Reveal>
+          <div className="mt-12 grid gap-4 md:grid-cols-3">
+            {teamPlaceholders.map((person, index) => (
+              <Reveal key={`team-${index}`} delay={index * 50}>
+                <div className="h-full border border-dashed border-[rgba(232,236,244,0.18)] bg-white/[0.015] p-6">
+                  <div
+                    className="mb-5 h-16 w-16 rounded-sm border border-[rgba(232,236,244,0.12)] bg-white/[0.03]"
+                    aria-hidden="true"
+                  />
+                  <p className="font-display text-xl text-off-white/70">{person.name}</p>
+                  <p className="mt-1 text-xs uppercase tracking-[0.14em] text-teal/70">
+                    {person.role}
+                  </p>
+                  <p className="mt-4 text-sm leading-relaxed text-muted">{person.bio}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="connect"
+        className="scroll-mt-24 border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28"
+      >
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal>
+            <SectionHeading eyebrow="Connect" title="Digital handles.">
+              <p>
+                Official channels will be listed here when ready. Until then, reach us through
+                Contact.
+              </p>
+            </SectionHeading>
+          </Reveal>
+          <div className="mt-10 flex flex-wrap gap-3">
+            {connectPlaceholders.map((item) => (
+              <span
+                key={item.label}
+                className="inline-flex items-center gap-2 rounded-sm border border-[rgba(232,236,244,0.12)] px-4 py-2.5 text-sm text-mist/70"
+              >
+                {item.label}
+                <span className="text-[11px] uppercase tracking-[0.12em] text-muted">
+                  Coming soon
+                </span>
+              </span>
+            ))}
+          </div>
         </div>
       </section>
 

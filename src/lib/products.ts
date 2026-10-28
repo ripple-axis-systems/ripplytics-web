@@ -10,7 +10,7 @@ export type Product = {
   question: string;
   tagline: string;
   description: string;
-  /** Honest deliverable within real scope */
+  /** Plain-language deliverable for Applications / Home — no engine jargon */
   deliverable: string;
   status: ProductStatus;
   available: boolean;
@@ -22,8 +22,8 @@ export type Product = {
 
 export const statusLabels: Record<ProductStatus, string> = {
   "live-beta": "Live Beta",
-  "coming-soon": "Under development",
-  "in-development": "Concept",
+  "coming-soon": "R&D in progress",
+  "in-development": "R&D in progress",
 };
 
 export const products: Product[] = [
@@ -35,9 +35,9 @@ export const products: Product[] = [
     question: "What is the state of global risk — and where might pressure travel next?",
     tagline: "See beyond the first movement.",
     description:
-      "A Live Beta application for reading global conditions, connected signals and transmission pathways — so investors and analysts can see risk in context, not as isolated headlines.",
+      "A Live Beta application that helps investors and analysts read global conditions, connected signals and transmission pathways — risk in context, not as isolated headlines.",
     deliverable:
-      "Credentialed dashboard: system signal and briefing, pillar scores (GCPI, GFSI, GRCI), SSI reasoning and operational alerts, TRI / Ripple Field transmission, MASI absorption, EII / ACI evidence, and a 19-country lens — diagnostic conditions intelligence, not forecasts or trade advice.",
+      "A credentialed dashboard for system briefing, country and pillar views, transmission pathways, absorption context and operational alerts — diagnostic conditions intelligence, not forecasts or trade advice.",
     status: "live-beta",
     available: true,
     cta: { label: "Explore RipplePoint", href: "/ripplepoint" },
@@ -56,8 +56,7 @@ export const products: Product[] = [
     tagline: "A portfolio is more than a collection of positions.",
     description:
       "Intended to give a structured view of portfolio health, strength and systemic risk when market conditions shift together.",
-    deliverable:
-      "Planned: portfolio-level health and resilience views. Not available in Live Beta.",
+    deliverable: "R&D in progress — portfolio-level health and resilience views toward launch.",
     status: "coming-soon",
     available: false,
     cta: { label: "Register Interest", href: "/contact?interest=Portfolio+Intelligence" },
@@ -76,8 +75,7 @@ export const products: Product[] = [
     tagline: "Markets leave traces before conditions become obvious.",
     description:
       "Intended to identify and interpret changes in market structure, momentum, pressure and participation.",
-    deliverable:
-      "Planned: market-structure and participation intelligence. Not available in Live Beta.",
+    deliverable: "R&D in progress — market-structure and participation intelligence toward launch.",
     status: "coming-soon",
     available: false,
     cta: { label: "Register Interest", href: "/contact?interest=Market+Intelligence" },
@@ -96,8 +94,7 @@ export const products: Product[] = [
     tagline: "The visible numbers are only part of a business.",
     description:
       "Intended to examine structural, operational and strategic dimensions of business risk beneath surface performance.",
-    deliverable:
-      "Planned: business vulnerability and exposure views. Not available in Live Beta.",
+    deliverable: "R&D in progress — business vulnerability and exposure views toward launch.",
     status: "coming-soon",
     available: false,
     cta: { label: "Register Interest", href: "/contact?interest=Business+Risk" },
@@ -116,8 +113,7 @@ export const products: Product[] = [
     tagline: "There are more signals than anyone can watch manually.",
     description:
       "Intended to discover and track signals that may warrant deeper investigation.",
-    deliverable:
-      "Planned: signal discovery and tracking. Not available in Live Beta.",
+    deliverable: "R&D in progress — signal discovery and tracking toward launch.",
     status: "coming-soon",
     available: false,
     cta: { label: "Register Interest", href: "/contact?interest=Other" },
@@ -136,8 +132,7 @@ export const products: Product[] = [
     tagline: "Between a signal and an outcome lies a chain of decisions.",
     description:
       "An evolving concept for understanding how signals translate into decisions, actions and market outcomes.",
-    deliverable:
-      "Concept stage — direction only; not a product surface today.",
+    deliverable: "R&D in progress — direction for signal-to-outcome intelligence.",
     status: "in-development",
     available: false,
     cta: { label: "Discuss the Concept", href: "/contact?interest=Other" },
@@ -149,7 +144,7 @@ export const products: Product[] = [
   },
 ];
 
-/** Homepage / Applications outcome groups — customer problem first. */
+/** Homepage / Applications groups — insights for decisions; equal family framing. */
 export const outcomeGroups = [
   {
     id: "global-risk",
@@ -163,7 +158,7 @@ export const outcomeGroups = [
     id: "portfolio-market",
     number: "02",
     title: "Portfolio health & market conditions",
-    availability: "Under development" as const,
+    availability: "R&D in progress" as const,
     products: ["portfolio-health-engine", "echopulse"],
     prominent: false,
   },
@@ -171,7 +166,7 @@ export const outcomeGroups = [
     id: "business",
     number: "03",
     title: "Business vulnerabilities",
-    availability: "Under development" as const,
+    availability: "R&D in progress" as const,
     products: ["rippleaudit"],
     prominent: false,
   },
@@ -179,7 +174,7 @@ export const outcomeGroups = [
     id: "signals",
     number: "04",
     title: "Discover / follow emerging signals",
-    availability: "Under development / concept" as const,
+    availability: "R&D in progress" as const,
     products: ["pulse-tracker", "rippletrace"],
     prominent: false,
   },

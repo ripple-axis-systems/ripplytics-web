@@ -69,6 +69,24 @@ export default function ContactPage() {
               <p className="text-[11px] uppercase tracking-[0.18em] text-teal">Company</p>
               <p className="mt-3 text-sm text-mist/90">{brand.legalName}</p>
             </div>
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.18em] text-teal">Management</p>
+              <p className="mt-3 text-sm text-muted">
+                Leadership profiles are being prepared.
+              </p>
+              <Link href="/about#team" className="mt-3 inline-flex text-sm text-teal">
+                About · Team →
+              </Link>
+            </div>
+            <div>
+              <p className="text-[11px] uppercase tracking-[0.18em] text-teal">Digital</p>
+              <p className="mt-3 text-sm text-muted">
+                LinkedIn, X and other handles — coming soon.
+              </p>
+              <Link href="/about#connect" className="mt-3 inline-flex text-sm text-teal">
+                About · Connect →
+              </Link>
+            </div>
           </div>
         </Reveal>
       </section>

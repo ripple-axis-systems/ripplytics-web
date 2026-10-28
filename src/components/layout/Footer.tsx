@@ -43,6 +43,24 @@ export function Footer() {
               </li>
             ))}
           </ul>
+          <p className="mt-8 text-[11px] font-medium uppercase tracking-[0.18em] text-muted">
+            Company
+          </p>
+          <ul className="mt-4 space-y-2.5">
+            <li>
+              <Link href="/about#team" className="text-sm text-mist/80 transition-colors hover:text-teal">
+                Team / Leadership
+              </Link>
+            </li>
+            <li>
+              <Link href="/about#connect" className="text-sm text-mist/80 transition-colors hover:text-teal">
+                Connect
+              </Link>
+            </li>
+            <li>
+              <span className="text-sm text-muted/70">LinkedIn · X — coming soon</span>
+            </li>
+          </ul>
         </div>
       </div>
 

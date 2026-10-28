@@ -7,7 +7,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Technology & Methodology",
   description:
-    "Intelligence begins with a question. Technology makes it scalable. Explore the Ripplytics data categories, models and validation principles.",
+    "Intelligence begins with a question. Technology makes it scalable. Explore Ripplytics data categories, system thinking and a light view of models.",
   path: "/technology",
 });
 
@@ -78,33 +78,7 @@ export default function TechnologyPage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-5 md:px-8">
-          <Reveal>
-            <SectionHeading title="Models & indices">
-              <p>
-                Names below match engines live in RipplePoint Beta. They are components of a
-                broader intelligence architecture — not standalone predictions, forecasts or trade
-                advice.
-              </p>
-            </SectionHeading>
-          </Reveal>
-          <div className="mt-12 grid gap-4 md:grid-cols-2">
-            {models.map((model) => (
-              <div
-                key={model.acronym}
-                className="rounded-sm border border-[rgba(232,236,244,0.1)] bg-white/[0.02] p-6"
-              >
-                <p className="font-display text-2xl text-teal">{model.acronym}</p>
-                <p className="mt-2 text-sm uppercase tracking-[0.12em] text-muted">{model.name}</p>
-                <p className="mt-4 text-sm leading-relaxed text-mist/85">{model.purpose}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
+      <section className="border-y border-[rgba(232,236,244,0.08)] py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
             <Reveal>
@@ -175,6 +149,34 @@ export default function TechnologyPage() {
                 }`}
               >
                 {item}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Softened models — later / lighter; not a methodology playbook on first read */}
+      <section className="border-t border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal>
+            <SectionHeading eyebrow="Going deeper" title="Models & indices — a light view.">
+              <p>
+                Named engines power parts of RipplePoint Live Beta. The list below is an
+                orientation, not a methodology handoff — purpose in one line each; detail belongs
+                in product evaluation conversations.
+              </p>
+            </SectionHeading>
+          </Reveal>
+          <div className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {models.map((model) => (
+              <div
+                key={model.acronym}
+                className="border border-[rgba(232,236,244,0.08)] bg-white/[0.015] px-4 py-4"
+              >
+                <p className="font-display text-lg text-teal">{model.acronym}</p>
+                <p className="mt-1 text-[11px] uppercase tracking-[0.12em] text-muted">
+                  {model.name}
+                </p>
               </div>
             ))}
           </div>

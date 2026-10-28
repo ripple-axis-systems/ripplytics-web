@@ -20,7 +20,7 @@ export function HomePage() {
 
   return (
     <div>
-      {/* 01 Hero — customer promise + who + CTAs (RipplePoint primary) */}
+      {/* 01 Hero — locked Round 5 promise */}
       <section className="bg-atmosphere relative overflow-hidden">
         <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-32 md:px-8 md:pb-28 md:pt-40 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="animate-fade-rise">
@@ -28,11 +28,11 @@ export function HomePage() {
               Ripplytics
             </p>
             <h1 className="mt-7 max-w-xl font-display text-3xl leading-[1.15] text-mist md:text-[2.35rem] lg:text-[2.6rem]">
-              See the risks behind the decision.
+              Risk insight that informs the decision.
             </h1>
             <p className="mt-5 max-w-md text-base leading-relaxed text-muted md:text-lg">
-              Understand market forces, emerging threats and connected signals that may influence
-              your next move.
+              Prevailing and emerging risk as inputs before you decide — not a post-mortem of
+              choices already made.
             </p>
             <p className="mt-6 max-w-lg text-sm leading-relaxed text-mist/80 md:text-[0.95rem]">
               Ripplytics develops intelligence tools that help investors, analysts and businesses
@@ -52,18 +52,18 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* 02 What you get / use now — RipplePoint primary */}
+      {/* 02 What you can use — RipplePoint Live Beta, no primary hierarchy */}
       <section className="border-t border-[rgba(232,236,244,0.08)] py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading
-              eyebrow="What you can use now"
-              title="RipplePoint — Live Beta for global risk."
+              eyebrow="Available now"
+              title="RipplePoint — Live Beta."
             >
               <p>
-                The primary live product is RipplePoint: a credentialed dashboard for reading
-                global conditions, connected signals and where pressure may travel — not forecasts
-                or portfolio recommendations.
+                RipplePoint is available as Live Beta: a credentialed dashboard that helps you read
+                global conditions, follow connected signals and see where pressure may travel —
+                insight for decisions, not forecasts or portfolio recommendations.
               </p>
             </SectionHeading>
           </Reveal>
@@ -82,7 +82,7 @@ export function HomePage() {
                 {ripplepoint.name}
               </h3>
               <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted">
-                {ripplepoint.deliverable}
+                {ripplepoint.description}
               </p>
               <span className="mt-8 inline-flex text-sm text-teal">Explore RipplePoint →</span>
             </Link>
@@ -113,17 +113,18 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* 04 Outcome strip — 01 live; 02–04 planned */}
+      {/* 04 Application family — equal suite; Live Beta where available */}
       <section className="py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading
-              eyebrow="Decision environments"
-              title="One primary outcome live. Others in development."
+              eyebrow="Applications"
+              title="A family of risk-intelligence applications."
             >
               <p>
-                RipplePoint is the live proof for global risk. Portfolio, market, business and
-                signal products are staged — clearly labelled, not equal pillars today.
+                RipplePoint is available as Live Beta. The wider suite — portfolio, market,
+                business and signal intelligence — is in deep R&amp;D toward launch. One philosophy;
+                equal ambition across the family.
               </p>
             </SectionHeading>
           </Reveal>
@@ -133,7 +134,7 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* 05 Supporting — ripple philosophy (demoted from lead) */}
+      {/* 05 Supporting — ripple philosophy */}
       <section className="border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
@@ -223,7 +224,7 @@ export function HomePage() {
         </div>
       </section>
 
-      {/* 11 Roadmap honesty */}
+      {/* 11 Roadmap */}
       <section className="bg-section-soft py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>

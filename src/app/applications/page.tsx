@@ -8,7 +8,7 @@ import { pageMetadata } from "@/lib/seo";
 export const metadata: Metadata = pageMetadata({
   title: "Applications",
   description:
-    "Customer outcomes first: global risk (Live Beta), portfolio and market conditions, business vulnerabilities, and emerging signals — with honest availability.",
+    "Insights and perspective for decisions — a suite of risk-intelligence applications, with RipplePoint available as Live Beta and deep R&D toward more launches.",
   path: "/applications",
 });
 
@@ -18,13 +18,13 @@ export default function ApplicationsPage() {
       <section className="mx-auto max-w-7xl px-5 pb-16 pt-32 md:px-8 md:pb-20 md:pt-40">
         <Reveal>
           <h1 className="max-w-4xl font-display text-4xl leading-tight text-off-white md:text-6xl">
-            Decisions first.
-            <span className="mt-3 block">Products that match them.</span>
+            Insights that shape better decisions.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            Ripplytics builds risk and decision-intelligence applications around customer
-            outcomes — not internal architecture. Only RipplePoint is Live Beta today; the rest
-            are staged and labelled honestly.
+            Ripplytics builds applications that surface risk factors and related perspective —
+            so decision-makers can see what may affect outcomes before they commit. Deep R&amp;D
+            is critical: RipplePoint is available as Live Beta; the wider suite is in progress
+            toward launch.
           </p>
         </Reveal>
       </section>
@@ -47,7 +47,7 @@ export default function ApplicationsPage() {
                 <div className="flex flex-wrap items-start justify-between gap-4">
                   <div>
                     <p className="text-[11px] uppercase tracking-[0.18em] text-teal">
-                      {group.number} · Outcome
+                      {group.number} · Focus
                     </p>
                     <h2 className="mt-3 font-display text-2xl text-off-white md:text-3xl">
                       {group.title}
@@ -82,10 +82,10 @@ export default function ApplicationsPage() {
                         </div>
                         <StatusBadge status={product.status} />
                       </div>
-                      <p className="mt-4 text-sm font-medium text-mist/90 md:text-base">
-                        {product.question}
+                      <p className="mt-4 max-w-3xl text-sm leading-relaxed text-muted md:text-base">
+                        {product.description}
                       </p>
-                      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-muted">
+                      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-mist/80">
                         {product.deliverable}
                       </p>
                       <span className="mt-5 inline-flex text-sm text-teal">
@@ -104,9 +104,9 @@ export default function ApplicationsPage() {
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <p className="max-w-2xl text-sm leading-relaxed text-muted">
-              Full list ({products.length}): one Live Beta application and staged products for
-              portfolio, market, business and signal environments — same intelligence philosophy,
-              different decisions.
+              {products.length} applications in the family — RipplePoint Live Beta today; the rest
+              in deep R&amp;D toward launch. Same intelligence philosophy across the suite.
+              Technical model detail lives on Technology and product pages.
             </p>
           </Reveal>
         </div>

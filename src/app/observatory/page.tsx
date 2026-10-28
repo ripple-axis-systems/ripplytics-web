@@ -7,19 +7,37 @@ import { observatoryCategories } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = pageMetadata({
-  title: "The Ripplytics Observatory",
+  title: "Research — Risk Intelligence",
   description:
-    "Research examples and insight layer — tangible illustrations of connected risk thinking that support Ripplytics products.",
+    "Deep focus on Risk Intelligence — positive and negative risk — as Ripplytics builds toward a pioneer risk-intelligence systems company. Research supports products; it does not replace them.",
   path: "/observatory",
 });
 
 const studyAreas = [
-  { title: "Global Risk", body: "Emerging developments that may affect the wider economic and financial environment." },
-  { title: "Geopolitics", body: "Events and structural shifts that can influence markets, economies and strategic environments." },
-  { title: "Markets", body: "Changes in market behaviour, structure and risk conditions." },
-  { title: "Transmission", body: "How pressure moves between connected systems." },
-  { title: "Absorption", body: "How systems respond when pressure arrives." },
-  { title: "Regimes", body: "How changing environments alter the meaning of individual signals." },
+  {
+    title: "Risk Intelligence",
+    body: "Positive and negative risk — opportunity and threat — read as decision inputs, not after-the-fact commentary.",
+  },
+  {
+    title: "Global Risk",
+    body: "Emerging developments that may affect the wider economic and financial environment.",
+  },
+  {
+    title: "Geopolitics",
+    body: "Events and structural shifts that can influence markets, economies and strategic environments.",
+  },
+  {
+    title: "Markets",
+    body: "Changes in market behaviour, structure and risk conditions.",
+  },
+  {
+    title: "Transmission",
+    body: "How pressure moves between connected systems.",
+  },
+  {
+    title: "Absorption & regimes",
+    body: "How systems respond when pressure arrives — and how context changes the meaning of a signal.",
+  },
 ];
 
 export default function ObservatoryPage() {
@@ -29,15 +47,46 @@ export default function ObservatoryPage() {
         <Reveal>
           <p className="text-[11px] uppercase tracking-[0.2em] text-teal">Research & Insights</p>
           <h1 className="mt-4 max-w-4xl font-display text-4xl leading-tight text-off-white md:text-6xl">
-            The world generates signals continuously.
-            <span className="mt-3 block text-teal">We want to understand which ones matter.</span>
+            Deep focus on Risk Intelligence.
+            <span className="mt-3 block text-teal">
+              Building toward a pioneer systems company.
+            </span>
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
-            Tangible research examples as proof of connected-risk thinking. The Observatory
-            examines emerging risks, changing regimes, systemic relationships and the ideas behind
-            Ripplytics intelligence models — supporting products, not replacing them.
+            The Observatory centres on Risk Intelligence — both the downside that threatens
+            outcomes and the upside risk that creates opportunity. Research here sharpens the
+            models and questions behind Ripplytics applications. It supports the product suite; it
+            does not replace it.
           </p>
         </Reveal>
+      </section>
+
+      <section className="border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-16 md:py-20">
+        <div className="mx-auto max-w-7xl px-5 md:px-8">
+          <Reveal>
+            <div className="grid gap-8 md:grid-cols-3">
+              {[
+                {
+                  title: "Negative risk",
+                  body: "Threats, fragility and pressure that can damage portfolios, businesses and regimes.",
+                },
+                {
+                  title: "Positive risk",
+                  body: "Opportunity that emerges when conditions shift — insight that informs where to lean in.",
+                },
+                {
+                  title: "Systems ambition",
+                  body: "Toward a pioneer risk-intelligence systems company — applications today, connected infrastructure over time.",
+                },
+              ].map((item) => (
+                <div key={item.title} className="border-t border-teal/30 pt-5">
+                  <h3 className="font-display text-xl text-off-white">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted">{item.body}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
       </section>
 
       <EventCaseStrips />

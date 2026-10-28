@@ -53,7 +53,9 @@ export function ProductEcosystem() {
 
         <div className="relative">
           <StatusBadge status={primary.status} />
-          <p className="mt-5 text-[11px] uppercase tracking-[0.16em] text-teal/80">01 · Live outcome</p>
+          <p className="mt-5 text-[11px] uppercase tracking-[0.16em] text-teal/80">
+            Available as Live Beta
+          </p>
           <h3 className="mt-2 font-display text-3xl text-off-white md:text-4xl">{primary.name}</h3>
           <p className="mt-2 text-sm uppercase tracking-[0.14em] text-teal/90">{primary.outcome}</p>
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted">{primary.description}</p>
