@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Manrope, Syne } from "next/font/google";
+import { Fraunces, Source_Sans_3 } from "next/font/google";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { pageMetadata } from "@/lib/seo";
 import { brand } from "@/lib/theme";
 import "./globals.css";
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const sourceSans = Source_Sans_3({
+  variable: "--font-source-sans",
   subsets: ["latin"],
   display: "swap",
 });
 
-const syne = Syne({
-  variable: "--font-syne",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
   display: "swap",
 });
@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${syne.variable} antialiased`}>
+      <body className={`${sourceSans.variable} ${fraunces.variable} antialiased`}>
         <SiteShell>{children}</SiteShell>
       </body>
     </html>

@@ -25,7 +25,7 @@ export function QuestionOrbit() {
               cy="150"
               r="110"
               fill="none"
-              stroke="rgba(232,236,244,0.08)"
+              stroke="rgba(28,33,40,0.08)"
               strokeWidth="1"
             />
             <circle
@@ -33,15 +33,15 @@ export function QuestionOrbit() {
               cy="150"
               r="62"
               fill="none"
-              stroke="rgba(15,168,143,0.28)"
+              stroke="rgba(58,90,114,0.28)"
               strokeWidth="1.25"
             />
-            <circle cx="150" cy="150" r="7" fill="#0FA88F" className="animate-node-pulse" />
+            <circle cx="150" cy="150" r="7" fill="#3A5A72" className="animate-node-pulse" />
             <text
               x="150"
               y="175"
               textAnchor="middle"
-              fill="#E8ECF4"
+              fill="#1C2128"
               fontSize="11"
               letterSpacing="0.12em"
               fontFamily="var(--font-display), sans-serif"
@@ -59,10 +59,10 @@ export function QuestionOrbit() {
                     y1="150"
                     x2={x}
                     y2={y}
-                    stroke="rgba(15,168,143,0.28)"
+                    stroke="rgba(58,90,114,0.28)"
                     strokeWidth="1"
                   />
-                  <circle cx={x} cy={y} r="3.5" fill="#E8ECF4" opacity="0.8" />
+                  <circle cx={x} cy={y} r="3.5" fill="#1C2128" opacity="0.8" />
                 </g>
               );
             })}

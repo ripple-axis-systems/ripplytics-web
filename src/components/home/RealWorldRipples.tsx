@@ -9,7 +9,7 @@ import { ILLUSTRATIVE_DISCLAIMER, realWorldEpisodes } from "@/lib/content";
 
 export function RealWorldRipples() {
   return (
-    <section className="border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
+    <section className="border-y border-[rgba(28,33,40,0.08)] bg-section-soft py-20 md:py-28">
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
           <SectionHeading eyebrow="Observatory" title="Ripples in the real world.">

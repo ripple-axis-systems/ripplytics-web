@@ -5,7 +5,7 @@ import { Logo } from "./Logo";
 
 export function Footer() {
   return (
-    <footer className="border-t border-[rgba(232,236,244,0.08)] bg-[#090d1a]">
+    <footer className="border-t border-[rgba(28,33,40,0.08)] bg-[#d8d4cb]">
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-[1.4fr_1fr_1fr] md:px-8">
         <div>
           <Logo size="footer" />
@@ -64,7 +64,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-[rgba(232,236,244,0.08)]">
+      <div className="border-t border-[rgba(28,33,40,0.08)]">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-6 text-xs text-muted md:flex-row md:items-center md:justify-between md:px-8">
           <p>{brand.legalName}</p>
           <p>© {new Date().getFullYear()} Ripplytics. All rights reserved.</p>

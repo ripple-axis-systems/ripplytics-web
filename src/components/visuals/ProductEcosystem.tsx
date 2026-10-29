@@ -9,7 +9,7 @@ export function ProductEcosystem() {
     <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-stretch">
       <Link
         href={primary.route}
-        className="group relative flex flex-col justify-between overflow-hidden border border-teal/35 bg-[radial-gradient(ellipse_at_80%_0%,rgba(15,168,143,0.22),transparent_55%),linear-gradient(160deg,#12182b,#0b0f1f)] p-8 transition hover:border-teal/55 md:p-10"
+        className="group relative flex flex-col justify-between overflow-hidden border border-teal/35 bg-[radial-gradient(ellipse_at_80%_0%,rgba(58,90,114,0.22),transparent_55%),linear-gradient(160deg,#f2efe8,#e4e1d9)] p-8 transition hover:border-teal/55 md:p-10"
       >
         <div aria-hidden="true" className="pointer-events-none absolute inset-0">
           <svg viewBox="0 0 400 280" className="absolute right-0 top-0 h-full w-[70%] opacity-70">
@@ -18,7 +18,7 @@ export function ProductEcosystem() {
               cy="80"
               r="90"
               fill="none"
-              stroke="rgba(15,168,143,0.22)"
+              stroke="rgba(58,90,114,0.22)"
               strokeWidth="1"
             />
             <circle
@@ -26,16 +26,16 @@ export function ProductEcosystem() {
               cy="80"
               r="54"
               fill="none"
-              stroke="rgba(15,168,143,0.16)"
+              stroke="rgba(58,90,114,0.16)"
               strokeWidth="1"
             />
-            <circle cx="300" cy="80" r="5" fill="#0FA88F" className="animate-node-pulse" />
+            <circle cx="300" cy="80" r="5" fill="#3A5A72" className="animate-node-pulse" />
             <line
               x1="300"
               y1="80"
               x2="220"
               y2="160"
-              stroke="rgba(15,168,143,0.3)"
+              stroke="rgba(58,90,114,0.3)"
               strokeWidth="1"
             />
             <line
@@ -43,11 +43,11 @@ export function ProductEcosystem() {
               y1="80"
               x2="340"
               y2="190"
-              stroke="rgba(15,168,143,0.22)"
+              stroke="rgba(58,90,114,0.22)"
               strokeWidth="1"
             />
-            <circle cx="220" cy="160" r="3" fill="#E8ECF4" opacity="0.7" />
-            <circle cx="340" cy="190" r="3" fill="#E8ECF4" opacity="0.55" />
+            <circle cx="220" cy="160" r="3" fill="#1C2128" opacity="0.7" />
+            <circle cx="340" cy="190" r="3" fill="#1C2128" opacity="0.55" />
           </svg>
         </div>
 
@@ -65,7 +65,7 @@ export function ProductEcosystem() {
         </span>
       </Link>
 
-      <div className="relative flex flex-col justify-center gap-0 border border-[rgba(232,236,244,0.1)] bg-white/[0.015] px-2 py-2">
+      <div className="relative flex flex-col justify-center gap-0 border border-[rgba(28,33,40,0.1)] bg-[rgba(28,33,40,0.03)] px-2 py-2">
         <div
           className="pointer-events-none absolute left-6 top-6 bottom-6 w-px bg-gradient-to-b from-teal/40 via-white/10 to-transparent"
           aria-hidden="true"
@@ -74,7 +74,7 @@ export function ProductEcosystem() {
           <Link
             key={product.slug}
             href={product.route}
-            className="group relative pl-10 pr-4 py-5 transition hover:bg-white/[0.03]"
+            className="group relative pl-10 pr-4 py-5 transition hover:bg-[rgba(28,33,40,0.045)]"
           >
             <span
               className="absolute left-[18px] top-1/2 h-2.5 w-2.5 -translate-y-1/2 rounded-full border border-teal/50 bg-navy"

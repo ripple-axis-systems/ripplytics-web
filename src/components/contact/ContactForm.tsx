@@ -47,7 +47,7 @@ export function ContactForm() {
           name="interest"
           value={interest}
           onChange={(e) => setInterest(e.target.value)}
-          className="w-full rounded-sm border border-[rgba(232,236,244,0.16)] bg-navy-elevated px-4 py-3 text-mist outline-none focus:border-teal"
+          className="w-full rounded-sm border border-[rgba(28,33,40,0.16)] bg-navy-elevated px-4 py-3 text-mist outline-none focus:border-teal"
         >
           {contactInterests.map((item) => (
             <option key={item} value={item}>
@@ -63,7 +63,7 @@ export function ContactForm() {
           name="message"
           required
           rows={6}
-          className="w-full rounded-sm border border-[rgba(232,236,244,0.16)] bg-navy-elevated px-4 py-3 text-mist outline-none focus:border-teal"
+          className="w-full rounded-sm border border-[rgba(28,33,40,0.16)] bg-navy-elevated px-4 py-3 text-mist outline-none focus:border-teal"
           placeholder="Tell us what you are trying to understand."
         />
       </label>
@@ -91,7 +91,7 @@ function Field({
         name={name}
         type={type}
         required={required}
-        className="w-full rounded-sm border border-[rgba(232,236,244,0.16)] bg-navy-elevated px-4 py-3 text-mist outline-none focus:border-teal"
+        className="w-full rounded-sm border border-[rgba(28,33,40,0.16)] bg-navy-elevated px-4 py-3 text-mist outline-none focus:border-teal"
       />
     </label>
   );

@@ -54,7 +54,7 @@ export default function TechnologyPage() {
         </Reveal>
       </section>
 
-      <section className="border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
+      <section className="border-y border-[rgba(28,33,40,0.08)] bg-section-soft py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading title="Data">
@@ -69,7 +69,7 @@ export default function TechnologyPage() {
             {dataCategories.map((item) => (
               <span
                 key={item}
-                className="rounded-sm border border-[rgba(232,236,244,0.12)] px-4 py-2 text-sm text-mist/85"
+                className="rounded-sm border border-[rgba(28,33,40,0.12)] px-4 py-2 text-sm text-mist/85"
               >
                 {item}
               </span>
@@ -78,7 +78,7 @@ export default function TechnologyPage() {
         </div>
       </section>
 
-      <section className="border-y border-[rgba(232,236,244,0.08)] py-20 md:py-28">
+      <section className="border-y border-[rgba(28,33,40,0.08)] py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
             <Reveal>
@@ -145,7 +145,7 @@ export default function TechnologyPage() {
                 className={`rounded-sm border px-4 py-4 text-sm ${
                   item.toLowerCase().includes("limitation")
                     ? "border-teal/35 bg-teal/10 text-teal"
-                    : "border-[rgba(232,236,244,0.1)] bg-white/[0.02] text-mist/85"
+                    : "border-[rgba(28,33,40,0.1)] bg-[rgba(28,33,40,0.035)] text-mist/85"
                 }`}
               >
                 {item}
@@ -156,7 +156,7 @@ export default function TechnologyPage() {
       </section>
 
       {/* Softened models — later / lighter; not a methodology playbook on first read */}
-      <section className="border-t border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
+      <section className="border-t border-[rgba(28,33,40,0.08)] bg-section-soft py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading eyebrow="Going deeper" title="Models & indices — a light view.">
@@ -171,7 +171,7 @@ export default function TechnologyPage() {
             {models.map((model) => (
               <div
                 key={model.acronym}
-                className="border border-[rgba(232,236,244,0.08)] bg-white/[0.015] px-4 py-4"
+                className="border border-[rgba(28,33,40,0.08)] bg-[rgba(28,33,40,0.03)] px-4 py-4"
               >
                 <p className="font-display text-lg text-teal">{model.acronym}</p>
                 <p className="mt-1 text-[11px] uppercase tracking-[0.12em] text-muted">

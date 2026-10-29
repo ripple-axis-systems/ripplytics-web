@@ -104,7 +104,7 @@ export default function RipplePointPage() {
         </Reveal>
       </section>
 
-      <section className="border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
+      <section className="border-y border-[rgba(28,33,40,0.08)] bg-section-soft py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading
@@ -121,7 +121,7 @@ export default function RipplePointPage() {
             {seeSurfaces.map((item) => (
               <div
                 key={item.title}
-                className="rounded-sm border border-[rgba(232,236,244,0.1)] bg-white/[0.02] p-5"
+                className="rounded-sm border border-[rgba(28,33,40,0.1)] bg-[rgba(28,33,40,0.035)] p-5"
               >
                 <p className="font-display text-xl text-off-white">{item.title}</p>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{item.body}</p>
@@ -155,7 +155,7 @@ export default function RipplePointPage() {
         </div>
       </section>
 
-      <section className="border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
+      <section className="border-y border-[rgba(28,33,40,0.08)] bg-section-soft py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading title="Example use moments">
@@ -166,7 +166,7 @@ export default function RipplePointPage() {
             {useMoments.map((item) => (
               <div
                 key={item.title}
-                className="rounded-sm border border-[rgba(232,236,244,0.1)] bg-navy/40 p-6"
+                className="rounded-sm border border-[rgba(28,33,40,0.1)] bg-navy/40 p-6"
               >
                 <h3 className="font-display text-xl text-off-white">{item.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted">{item.body}</p>
@@ -196,7 +196,7 @@ export default function RipplePointPage() {
         </div>
       </section>
 
-      <section className="border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
+      <section className="border-y border-[rgba(28,33,40,0.08)] bg-section-soft py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading
@@ -223,7 +223,7 @@ export default function RipplePointPage() {
               ].map((step, index) => (
                 <span key={step} className="inline-flex items-center gap-2">
                   <span className="rounded-sm border border-teal/25 px-3 py-2 text-teal">{step}</span>
-                  {index < 6 ? <span className="text-white/20">→</span> : null}
+                  {index < 6 ? <span className="text-[rgba(28,33,40,0.25)]">→</span> : null}
                 </span>
               ))}
             </div>
@@ -241,7 +241,7 @@ export default function RipplePointPage() {
           <ul className="mt-10 max-w-3xl space-y-3">
             {notClaims.map((item) => (
               <li key={item} className="flex gap-3 text-muted">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-white/25" aria-hidden />
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[rgba(28,33,40,0.28)]" aria-hidden />
                 <span className="text-base leading-relaxed">{item}</span>
               </li>
             ))}
@@ -249,7 +249,7 @@ export default function RipplePointPage() {
         </div>
       </section>
 
-      <section className="border-t border-[rgba(232,236,244,0.08)] py-24 md:py-32">
+      <section className="border-t border-[rgba(28,33,40,0.08)] py-24 md:py-32">
         <div className="mx-auto max-w-3xl px-5 text-center md:px-8">
           <Reveal>
             <h2 className="font-display text-3xl text-off-white md:text-4xl">

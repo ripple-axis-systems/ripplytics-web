@@ -1,16 +1,16 @@
 export const colors = {
-  navy: "#0B0F1F",
-  navyElevated: "#12182B",
-  navySoft: "#1A2238",
-  teal: "#0FA88F",
-  tealMuted: "#0C8A75",
-  tealSoft: "rgba(15, 168, 143, 0.14)",
-  graphite: "#2A3145",
-  mist: "#E8ECF4",
-  offWhite: "#F4F6FA",
-  muted: "#9AA3B5",
-  line: "rgba(232, 236, 244, 0.12)",
-  lineStrong: "rgba(232, 236, 244, 0.22)",
+  navy: "#E4E1D9",
+  navyElevated: "#F2EFE8",
+  navySoft: "#D5D1C8",
+  teal: "#3A5A72",
+  tealMuted: "#2E4A5E",
+  tealSoft: "rgba(58, 90, 114, 0.12)",
+  graphite: "#B8B3A8",
+  mist: "#1C2128",
+  offWhite: "#12151A",
+  muted: "#5C6570",
+  line: "rgba(28, 33, 40, 0.12)",
+  lineStrong: "rgba(28, 33, 40, 0.22)",
 } as const;
 
 export const brand = {

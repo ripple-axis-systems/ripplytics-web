@@ -1,22 +1,26 @@
 @import "tailwindcss";
 
+/* Theme B — intelligence print / light editorial (Round 6)
+   Token names preserved from Theme A so layout classes keep working. */
 :root {
-  --navy: #0b0f1f;
-  --navy-elevated: #12182b;
-  --navy-soft: #1a2238;
-  --teal: #0fa88f;
-  --teal-muted: #0c8a75;
-  --teal-soft: rgba(15, 168, 143, 0.14);
-  --graphite: #2a3145;
-  --mist: #e8ecf4;
-  --off-white: #f4f6fa;
-  --muted: #9aa3b5;
-  --line: rgba(232, 236, 244, 0.12);
-  --line-strong: rgba(232, 236, 244, 0.22);
+  --navy: #e4e1d9;
+  --navy-elevated: #f2efe8;
+  --navy-soft: #d5d1c8;
+  --teal: #3a5a72;
+  --teal-muted: #2e4a5e;
+  --teal-soft: rgba(58, 90, 114, 0.12);
+  --graphite: #b8b3a8;
+  --mist: #1c2128;
+  --off-white: #12151a;
+  --muted: #5c6570;
+  --line: rgba(28, 33, 40, 0.12);
+  --line-strong: rgba(28, 33, 40, 0.22);
   --background: var(--navy);
   --foreground: var(--mist);
-  --font-display: var(--font-syne);
-  --font-body: var(--font-manrope);
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-source-sans);
+  --paper-deep: #cfcac0;
+  --ink-faint: rgba(28, 33, 40, 0.06);
 }
 
 @theme inline {
@@ -56,13 +60,13 @@ h2,
 h3,
 h4,
 .font-display {
-  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-family: var(--font-display), var(--font-body), serif;
   letter-spacing: -0.02em;
 }
 
 ::selection {
-  background: rgba(15, 168, 143, 0.35);
-  color: white;
+  background: rgba(58, 90, 114, 0.28);
+  color: #12151a;
 }
 
 a {
@@ -77,21 +81,34 @@ a {
 
 .bg-atmosphere {
   background:
-    radial-gradient(ellipse 80% 50% at 70% -10%, rgba(15, 168, 143, 0.16), transparent 55%),
-    radial-gradient(ellipse 60% 40% at 10% 20%, rgba(26, 34, 56, 0.9), transparent 50%),
-    linear-gradient(180deg, #0b0f1f 0%, #0e1426 45%, #0b0f1f 100%);
+    linear-gradient(180deg, rgba(210, 205, 194, 0.55) 0%, transparent 42%),
+    radial-gradient(ellipse 70% 45% at 78% 8%, rgba(58, 90, 114, 0.1), transparent 58%),
+    linear-gradient(165deg, #ebe8e1 0%, #e4e1d9 48%, #ddd8cf 100%);
 }
 
-/* Soft grid under figures — atmosphere, not decoration overload */
+/* Soft grid under figures — print field, not glow */
 .figure-panel {
   background:
-    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(15, 168, 143, 0.08), transparent 65%),
-    linear-gradient(180deg, rgba(18, 24, 43, 0.75), rgba(11, 15, 31, 0.35));
+    linear-gradient(180deg, rgba(242, 239, 232, 0.92), rgba(228, 225, 217, 0.7)),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 23px,
+      rgba(28, 33, 40, 0.035) 23px,
+      rgba(28, 33, 40, 0.035) 24px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 23px,
+      rgba(28, 33, 40, 0.035) 23px,
+      rgba(28, 33, 40, 0.035) 24px
+    );
 }
 
 .bg-section-soft {
   background:
-    linear-gradient(180deg, rgba(18, 24, 43, 0.55), rgba(11, 15, 31, 0.2)),
+    linear-gradient(180deg, rgba(213, 209, 200, 0.55), rgba(228, 225, 217, 0.25)),
     var(--navy);
 }
 
@@ -114,15 +131,15 @@ a {
 
 @keyframes propagate {
   0% {
-    opacity: 0.15;
-    transform: scale(0.35);
+    opacity: 0.2;
+    transform: scale(0.92);
   }
-  45% {
-    opacity: 0.55;
+  55% {
+    opacity: 0.45;
   }
   100% {
     opacity: 0;
-    transform: scale(1.45);
+    transform: scale(1.08);
   }
 }
 
@@ -157,7 +174,7 @@ a {
 }
 
 .animate-propagate {
-  animation: propagate 4.8s ease-out infinite;
+  animation: propagate 5.2s ease-out infinite;
 }
 
 .animate-node-pulse {
@@ -173,7 +190,7 @@ a {
   animation: fade-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-/* Desktop nav — subtle scale + teal underline; institutional, no bounce/glow */
+/* Desktop nav — steel underline; editorial, no glow */
 .nav-link {
   position: relative;
   display: inline-block;

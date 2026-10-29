@@ -20,7 +20,7 @@ export function ArchitectureLayers() {
               className={`flex w-full items-center gap-4 rounded-sm border px-4 py-3 text-left transition ${
                 selected
                   ? "border-teal/45 bg-teal/10"
-                  : "border-[rgba(232,236,244,0.08)] bg-white/[0.015] hover:border-[rgba(232,236,244,0.18)]"
+                  : "border-[rgba(28,33,40,0.08)] bg-[rgba(28,33,40,0.03)] hover:border-[rgba(28,33,40,0.18)]"
               }`}
             >
               <span className="font-mono text-xs text-teal/80">
@@ -37,12 +37,12 @@ export function ArchitectureLayers() {
         })}
       </div>
 
-      <div className="relative overflow-hidden rounded-sm border border-[rgba(232,236,244,0.12)] bg-[radial-gradient(ellipse_at_90%_10%,rgba(15,168,143,0.12),transparent_50%),linear-gradient(165deg,#12182b,#0b0f1f)] p-6 md:p-8">
+      <div className="relative overflow-hidden rounded-sm border border-[rgba(28,33,40,0.12)] bg-[radial-gradient(ellipse_at_90%_10%,rgba(58,90,114,0.12),transparent_50%),linear-gradient(165deg,#f2efe8,#e4e1d9)] p-6 md:p-8">
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-teal/50 to-transparent"
           aria-hidden="true"
         />
-        <div className="mb-6 h-1 overflow-hidden rounded-full bg-white/[0.06]" aria-hidden="true">
+        <div className="mb-6 h-1 overflow-hidden rounded-full bg-[rgba(28,33,40,0.08)]" aria-hidden="true">
           <div
             className="h-full rounded-full bg-teal/70 transition-[width] duration-500 ease-out"
             style={{ width: `${progress}%` }}

@@ -4,10 +4,10 @@ import type { ReactNode } from "react";
 
 type FigureProps = { className?: string };
 
-const teal = "#0FA88F";
-const mist = "#E8ECF4";
-const muted = "#9AA3B5";
-const soft = "rgba(232,236,244,0.12)";
+const teal = "#3A5A72";
+const mist = "#1C2128";
+const muted = "#5C6570";
+const soft = "rgba(28,33,40,0.12)";
 
 function SvgShell({
   idPrefix,
@@ -59,8 +59,8 @@ export function OriginFigure({ className }: FigureProps) {
     >
       {(ids) => (
         <>
-          <circle cx="120" cy="140" r="54" fill="none" stroke="rgba(15,168,143,0.18)" strokeWidth="1" />
-          <circle cx="120" cy="140" r="34" fill="none" stroke="rgba(15,168,143,0.35)" strokeWidth="1.25" />
+          <circle cx="120" cy="140" r="54" fill="none" stroke="rgba(58,90,114,0.18)" strokeWidth="1" />
+          <circle cx="120" cy="140" r="34" fill="none" stroke="rgba(58,90,114,0.35)" strokeWidth="1.25" />
           <circle cx="120" cy="140" r="10" fill={teal} className="animate-node-pulse" />
           <text
             x="120"
@@ -228,7 +228,7 @@ export function SignalFigure({ className }: FigureProps) {
             y1="58"
             x2="340"
             y2="58"
-            stroke="rgba(15,168,143,0.35)"
+            stroke="rgba(58,90,114,0.35)"
             strokeWidth="1"
             strokeDasharray="3 4"
           />
@@ -263,7 +263,7 @@ export function ConnectionFigure({ className }: FigureProps) {
               y1={130}
               x2={n.x}
               y2={n.y}
-              stroke="rgba(15,168,143,0.45)"
+              stroke="rgba(58,90,114,0.45)"
               strokeWidth="1.4"
             />
           ))}
@@ -336,7 +336,7 @@ export function TransmissionFigure({ className }: FigureProps) {
           <path
             d="M70 160 C130 200, 190 140, 250 180 S330 210, 380 160"
             fill="none"
-            stroke="rgba(15,168,143,0.35)"
+            stroke="rgba(58,90,114,0.35)"
             strokeWidth="1.4"
             strokeDasharray="5 4"
             markerEnd={`url(#${ids.arrow})`}
@@ -397,9 +397,9 @@ export function ExposureFigure({ className }: FigureProps) {
     >
       {() => (
         <>
-          <ellipse cx="200" cy="140" rx="150" ry="95" fill="none" stroke="rgba(15,168,143,0.15)" strokeWidth="1" />
-          <ellipse cx="200" cy="140" rx="100" ry="62" fill="none" stroke="rgba(15,168,143,0.28)" strokeWidth="1.2" />
-          <ellipse cx="200" cy="140" rx="48" ry="30" fill="rgba(15,168,143,0.12)" stroke={teal} strokeWidth="1.4" />
+          <ellipse cx="200" cy="140" rx="150" ry="95" fill="none" stroke="rgba(58,90,114,0.15)" strokeWidth="1" />
+          <ellipse cx="200" cy="140" rx="100" ry="62" fill="none" stroke="rgba(58,90,114,0.28)" strokeWidth="1.2" />
+          <ellipse cx="200" cy="140" rx="48" ry="30" fill="rgba(58,90,114,0.12)" stroke={teal} strokeWidth="1.4" />
           <circle cx="200" cy="140" r="7" fill={teal} />
           <text
             x="200"
@@ -487,7 +487,7 @@ export function AbsorptionFigure({ className }: FigureProps) {
             width="120"
             height="140"
             rx="4"
-            fill="rgba(15,168,143,0.08)"
+            fill="rgba(58,90,114,0.08)"
             stroke={teal}
             strokeWidth="1.4"
           />
@@ -525,19 +525,19 @@ export function AbsorptionFigure({ className }: FigureProps) {
 
           <path
             d="M270 100 L380 70"
-            stroke="rgba(15,168,143,0.55)"
+            stroke="rgba(58,90,114,0.55)"
             strokeWidth="1.4"
             markerEnd={`url(#${ids.arrow})`}
           />
           <path
             d="M270 140 L390 140"
-            stroke="rgba(15,168,143,0.55)"
+            stroke="rgba(58,90,114,0.55)"
             strokeWidth="1.4"
             markerEnd={`url(#${ids.arrow})`}
           />
           <path
             d="M270 180 L380 210"
-            stroke="rgba(232,236,244,0.35)"
+            stroke="rgba(28,33,40,0.35)"
             strokeWidth="1.4"
             markerEnd={`url(#${ids.arrow})`}
           />
@@ -622,7 +622,7 @@ export function ImpactFigure({ className }: FigureProps) {
               <path
                 d={`M110 140 Q180 ${b.y}, 260 ${b.y}`}
                 fill="none"
-                stroke="rgba(15,168,143,0.55)"
+                stroke="rgba(58,90,114,0.55)"
                 strokeWidth="1.5"
                 markerEnd={`url(#${ids.arrow})`}
               />
@@ -681,13 +681,13 @@ export function DecisionFigure({ className }: FigureProps) {
             />
           ))}
 
-          <circle cx="240" cy="140" r="72" fill="rgba(15,168,143,0.06)" stroke={teal} strokeWidth="1.6" />
+          <circle cx="240" cy="140" r="72" fill="rgba(58,90,114,0.06)" stroke={teal} strokeWidth="1.6" />
           <circle
             cx="240"
             cy="140"
             r="42"
             fill="none"
-            stroke="rgba(15,168,143,0.4)"
+            stroke="rgba(58,90,114,0.4)"
             strokeWidth="1"
             strokeDasharray="4 3"
           />

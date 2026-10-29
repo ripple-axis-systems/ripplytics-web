@@ -9,10 +9,10 @@ export function RippleSequence() {
   const current = rippleSequence[active];
 
   return (
-    <div className="overflow-hidden rounded-sm border border-[rgba(232,236,244,0.1)] figure-panel">
+    <div className="overflow-hidden rounded-sm border border-[rgba(28,33,40,0.1)] figure-panel">
       <div className="grid gap-0 lg:grid-cols-[0.88fr_1.12fr]">
         {/* Stage list — connected spine */}
-        <div className="border-b border-[rgba(232,236,244,0.08)] p-5 md:p-7 lg:border-b-0 lg:border-r">
+        <div className="border-b border-[rgba(28,33,40,0.08)] p-5 md:p-7 lg:border-b-0 lg:border-r">
           <p className="mb-4 text-[11px] uppercase tracking-[0.18em] text-teal">Risk Path</p>
           <div className="relative">
             <div
@@ -30,13 +30,13 @@ export function RippleSequence() {
                     aria-selected={selected}
                     onClick={() => setActive(index)}
                     className={`relative flex items-start gap-4 rounded-sm px-1 py-2 text-left transition ${
-                      selected ? "bg-teal/8" : "hover:bg-white/[0.02]"
+                      selected ? "bg-teal/8" : "hover:bg-[rgba(28,33,40,0.035)]"
                     }`}
                   >
                     <span
                       className={`relative z-10 mt-1.5 h-[11px] w-[11px] shrink-0 rounded-full border transition ${
                         selected
-                          ? "border-teal bg-teal shadow-[0_0_0_4px_rgba(15,168,143,0.15)]"
+                          ? "border-teal bg-teal shadow-[0_0_0_4px_rgba(58,90,114,0.15)]"
                           : index < active
                             ? "border-teal/50 bg-teal/40"
                             : "border-white/25 bg-navy"
@@ -85,7 +85,7 @@ export function RippleSequence() {
                 <span
                   key={step.id}
                   className={`h-1 w-7 rounded-full transition-colors ${
-                    index <= active ? "bg-teal" : "bg-white/10"
+                    index <= active ? "bg-teal" : "bg-[rgba(28,33,40,0.12)]"
                   }`}
                 />
               ))}

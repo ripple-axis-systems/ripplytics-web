@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export function Logo({
-  variant = "dark",
+  variant = "light",
   className = "",
   size = "nav",
 }: {
@@ -12,6 +12,7 @@ export function Logo({
 }) {
   // Cropped marks remove ~43% transparent padding from source PNGs so CSS
   // height maps to the visible wordmark (premium brand scale).
+  // Theme B is light paper — default to the dark mark (variant "light").
   const src =
     variant === "dark"
       ? "/logos/ripplytics-mark-dark.png"

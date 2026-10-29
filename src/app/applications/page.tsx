@@ -41,7 +41,7 @@ export default function ApplicationsPage() {
                 className={`rounded-sm border p-6 md:p-8 ${
                   group.prominent
                     ? "border-teal/35 bg-gradient-to-r from-teal/10 to-transparent"
-                    : "border-[rgba(232,236,244,0.1)] bg-white/[0.02]"
+                    : "border-[rgba(28,33,40,0.1)] bg-[rgba(28,33,40,0.035)]"
                 }`}
               >
                 <div className="flex flex-wrap items-start justify-between gap-4">
@@ -57,7 +57,7 @@ export default function ApplicationsPage() {
                     className={`inline-flex items-center rounded-sm border px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.14em] ${
                       group.prominent
                         ? "border-teal/50 text-teal bg-teal/10"
-                        : "border-[rgba(232,236,244,0.22)] text-muted bg-white/[0.03]"
+                        : "border-[rgba(28,33,40,0.22)] text-muted bg-[rgba(28,33,40,0.045)]"
                     }`}
                   >
                     {group.availability}
@@ -69,7 +69,7 @@ export default function ApplicationsPage() {
                     <Link
                       key={product.slug}
                       href={product.route}
-                      className="block rounded-sm border border-[rgba(232,236,244,0.08)] bg-navy/30 p-5 transition hover:border-[rgba(232,236,244,0.2)] md:p-6"
+                      className="block rounded-sm border border-[rgba(28,33,40,0.08)] bg-navy/30 p-5 transition hover:border-[rgba(28,33,40,0.2)] md:p-6"
                     >
                       <div className="flex flex-wrap items-start justify-between gap-3">
                         <div>
@@ -100,7 +100,7 @@ export default function ApplicationsPage() {
         })}
       </section>
 
-      <section className="border-t border-[rgba(232,236,244,0.08)] bg-section-soft py-16">
+      <section className="border-t border-[rgba(28,33,40,0.08)] bg-section-soft py-16">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <p className="max-w-2xl text-sm leading-relaxed text-muted">

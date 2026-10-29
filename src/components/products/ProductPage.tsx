@@ -30,7 +30,7 @@ export function ProductPage({ product }: { product: Product }) {
         </Reveal>
       </section>
 
-      <section className="border-t border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
+      <section className="border-t border-[rgba(28,33,40,0.08)] bg-section-soft py-20 md:py-28">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 md:grid-cols-2 md:px-8">
           <Reveal>
             <SectionHeading title="The problem">
@@ -55,7 +55,7 @@ export function ProductPage({ product }: { product: Product }) {
       {!product.available ? (
         <section className="mx-auto max-w-7xl px-5 py-20 md:px-8 md:py-28">
           <Reveal>
-            <div className="rounded-sm border border-dashed border-[rgba(232,236,244,0.18)] bg-white/[0.02] p-8 md:p-12">
+            <div className="rounded-sm border border-dashed border-[rgba(28,33,40,0.18)] bg-[rgba(28,33,40,0.035)] p-8 md:p-12">
               <p className="text-[11px] uppercase tracking-[0.18em] text-muted">Conceptual</p>
               <div className="mt-8 flex flex-wrap items-center gap-3 text-sm text-muted">
                 <span className="rounded-sm border border-teal/30 px-3 py-2 text-teal">Signal</span>

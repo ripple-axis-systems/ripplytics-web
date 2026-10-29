@@ -44,7 +44,7 @@ const WAVE_Y = [78, 108, 72, 112, 76, 108, 80, 70] as const;
 export function RipplePath() {
   return (
     <Reveal>
-      <figure className="relative overflow-hidden rounded-sm border border-[rgba(232,236,244,0.1)] figure-panel px-4 py-10 md:px-8 md:py-12">
+      <figure className="relative overflow-hidden rounded-sm border border-[rgba(28,33,40,0.1)] figure-panel px-4 py-10 md:px-8 md:py-12">
         <figcaption className="sr-only">
           Annotated ripple path from Origin through Signal, Connection, Transmission, Exposure,
           Absorption, Impact, to Decision.
@@ -58,9 +58,9 @@ export function RipplePath() {
         >
           <defs>
             <linearGradient id="path-flow" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#0FA88F" stopOpacity="0.25" />
-              <stop offset="45%" stopColor="#0FA88F" stopOpacity="0.9" />
-              <stop offset="100%" stopColor="#E8ECF4" stopOpacity="0.4" />
+              <stop offset="0%" stopColor="#3A5A72" stopOpacity="0.25" />
+              <stop offset="45%" stopColor="#3A5A72" stopOpacity="0.9" />
+              <stop offset="100%" stopColor="#1C2128" stopOpacity="0.4" />
             </linearGradient>
           </defs>
 
@@ -75,7 +75,7 @@ export function RipplePath() {
           <path
             d="M56 96 C130 48, 210 144, 288 88 S440 34, 528 104 S670 158, 760 84 S840 54, 864 78"
             fill="none"
-            stroke="rgba(15,168,143,0.1)"
+            stroke="rgba(58,90,114,0.1)"
             strokeWidth="12"
           />
 
@@ -93,7 +93,7 @@ export function RipplePath() {
                     y1={y}
                     x2={x + 102}
                     y2={WAVE_Y[index + 1]}
-                    stroke="rgba(15,168,143,0.18)"
+                    stroke="rgba(58,90,114,0.18)"
                     strokeWidth="1"
                     strokeDasharray="3 4"
                   />
@@ -102,7 +102,7 @@ export function RipplePath() {
                   cx={x}
                   cy={y}
                   r={isFirst || isLast ? 8 : 5.5}
-                  fill={isFirst ? "#0FA88F" : isLast ? "#E8ECF4" : "#E8ECF4"}
+                  fill={isFirst ? "#3A5A72" : isLast ? "#1C2128" : "#1C2128"}
                   opacity={isLast ? 0.85 : 1}
                   className={isFirst ? "animate-node-pulse" : undefined}
                 />
@@ -110,7 +110,7 @@ export function RipplePath() {
                   x={x}
                   y={labelAbove ? y - 28 : y + 26}
                   textAnchor="middle"
-                  fill="#F4F6FA"
+                  fill="#12151A"
                   fontSize="12"
                   fontWeight="600"
                   letterSpacing="0.04em"
@@ -122,7 +122,7 @@ export function RipplePath() {
                   x={x}
                   y={labelAbove ? y - 14 : y + 40}
                   textAnchor="middle"
-                  fill="#9AA3B5"
+                  fill="#5C6570"
                   fontSize="10"
                   letterSpacing="0.02em"
                   fontFamily="var(--font-body), sans-serif"

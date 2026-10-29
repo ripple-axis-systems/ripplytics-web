@@ -17,7 +17,7 @@ export function EventCaseStrips() {
   return (
     <section
       id="real-world-cases"
-      className="scroll-mt-28 border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28"
+      className="scroll-mt-28 border-y border-[rgba(28,33,40,0.08)] bg-section-soft py-20 md:py-28"
     >
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <Reveal>
@@ -33,7 +33,7 @@ export function EventCaseStrips() {
         <div className="mt-14 space-y-14">
           {realWorldEpisodes.map((ep, index) => (
             <Reveal key={ep.id} delay={index * 40}>
-              <article className="border-t border-[rgba(232,236,244,0.12)] pt-10">
+              <article className="border-t border-[rgba(28,33,40,0.12)] pt-10">
                 <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-4">
                   <div className="flex flex-wrap items-baseline gap-x-4 gap-y-2">
                     <p className="text-[11px] uppercase tracking-[0.18em] text-teal">{ep.period}</p>

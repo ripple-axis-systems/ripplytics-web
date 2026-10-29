@@ -27,7 +27,7 @@ export default function IntelligencePage() {
         </Reveal>
       </section>
 
-      <section className="border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
+      <section className="border-y border-[rgba(28,33,40,0.08)] bg-section-soft py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading

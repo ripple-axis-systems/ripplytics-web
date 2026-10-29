@@ -33,7 +33,7 @@ export default function HowWeThinkPage() {
         </Reveal>
       </section>
 
-      <section className="border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
+      <section className="border-y border-[rgba(28,33,40,0.08)] bg-section-soft py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading title="When something changes, we ask:" />
@@ -63,7 +63,7 @@ export default function HowWeThinkPage() {
         </div>
       </section>
 
-      <section className="border-t border-[rgba(232,236,244,0.08)] py-20 md:py-28">
+      <section className="border-t border-[rgba(28,33,40,0.08)] py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading title="A risk is not defined only by its size.">

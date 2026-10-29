@@ -23,7 +23,7 @@ export function MiniPathSchematic({
         y1="14"
         x2="210"
         y2="14"
-        stroke="rgba(15,168,143,0.25)"
+        stroke="rgba(58,90,114,0.25)"
         strokeWidth="1"
       />
       {STEPS.map((letter, i) => {
@@ -37,7 +37,7 @@ export function MiniPathSchematic({
                 y1={14}
                 x2={x + 23}
                 y2={14}
-                stroke={i >= from && i < to ? "rgba(15,168,143,0.7)" : "rgba(232,236,244,0.12)"}
+                stroke={i >= from && i < to ? "rgba(58,90,114,0.7)" : "rgba(28,33,40,0.12)"}
                 strokeWidth="1.2"
               />
             ) : null}
@@ -45,13 +45,13 @@ export function MiniPathSchematic({
               cx={x}
               cy={14}
               r={on ? 5 : 3.5}
-              fill={on ? "#0FA88F" : "rgba(232,236,244,0.2)"}
+              fill={on ? "#3A5A72" : "rgba(28,33,40,0.2)"}
             />
             <text
               x={x}
               y={26}
               textAnchor="middle"
-              fill={on ? "#0FA88F" : "#9AA3B5"}
+              fill={on ? "#3A5A72" : "#5C6570"}
               fontSize="7"
               fontFamily="var(--font-body), sans-serif"
             >

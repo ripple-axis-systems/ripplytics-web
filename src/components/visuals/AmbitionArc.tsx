@@ -20,7 +20,7 @@ const stages = [
 export function AmbitionArc() {
   return (
     <Reveal>
-      <div className="relative overflow-hidden rounded-sm border border-[rgba(232,236,244,0.1)] bg-[linear-gradient(180deg,rgba(18,24,43,0.7),rgba(11,15,31,0.25))] px-5 py-10 md:px-10 md:py-12">
+      <div className="relative overflow-hidden rounded-sm border border-[rgba(28,33,40,0.1)] bg-[linear-gradient(180deg,rgba(242,239,232,0.7),rgba(228,225,217,0.25))] px-5 py-10 md:px-10 md:py-12">
         <svg
           viewBox="0 0 720 120"
           className="mx-auto mb-10 hidden h-auto w-full max-w-4xl md:block"
@@ -29,7 +29,7 @@ export function AmbitionArc() {
           <path
             d="M60 90 C180 20, 300 20, 360 60 S540 110, 660 40"
             fill="none"
-            stroke="rgba(15,168,143,0.45)"
+            stroke="rgba(58,90,114,0.45)"
             strokeWidth="2"
             className="animate-path-draw"
             strokeDasharray="800"
@@ -40,7 +40,7 @@ export function AmbitionArc() {
                 cx={x}
                 cy={i === 0 ? 88 : i === 1 ? 58 : 42}
                 r={i === 2 ? 6 : 7}
-                fill={i === 0 ? "#0FA88F" : "#E8ECF4"}
+                fill={i === 0 ? "#3A5A72" : "#1C2128"}
                 opacity={i === 2 ? 0.65 : 1}
                 className={i === 0 ? "animate-node-pulse" : undefined}
               />

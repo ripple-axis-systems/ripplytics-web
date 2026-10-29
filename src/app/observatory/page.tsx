@@ -61,7 +61,7 @@ export default function ObservatoryPage() {
         </Reveal>
       </section>
 
-      <section className="border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-16 md:py-20">
+      <section className="border-y border-[rgba(28,33,40,0.08)] bg-section-soft py-16 md:py-20">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <div className="grid gap-8 md:grid-cols-3">
@@ -98,7 +98,7 @@ export default function ObservatoryPage() {
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {studyAreas.map((item) => (
-              <div key={item.title} className="border-t border-[rgba(232,236,244,0.12)] pt-5">
+              <div key={item.title} className="border-t border-[rgba(28,33,40,0.12)] pt-5">
                 <h3 className="font-display text-xl text-off-white">{item.title}</h3>
                 <p className="mt-3 text-sm text-muted">{item.body}</p>
               </div>
@@ -107,7 +107,7 @@ export default function ObservatoryPage() {
         </div>
       </section>
 
-      <section className="border-t border-[rgba(232,236,244,0.08)] py-20 md:py-28">
+      <section className="border-t border-[rgba(28,33,40,0.08)] py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading title="We don't want to add to the noise.">
@@ -121,7 +121,7 @@ export default function ObservatoryPage() {
           <div className="mt-12 space-y-4">
             {observatoryCategories.map((item, index) => (
               <Reveal key={item.id} delay={index * 40}>
-                <article className="border-t border-[rgba(232,236,244,0.1)] py-8">
+                <article className="border-t border-[rgba(28,33,40,0.1)] py-8">
                   <p className="text-[11px] uppercase tracking-[0.18em] text-teal">{item.label}</p>
                   <h3 className="mt-3 font-display text-2xl text-off-white md:text-3xl">
                     {item.label}

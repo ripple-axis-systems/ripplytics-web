@@ -26,7 +26,7 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-b border-[rgba(232,236,244,0.08)] bg-[rgba(11,15,31,0.9)] backdrop-blur-md py-3.5"
+          ? "border-b border-[rgba(28,33,40,0.08)] bg-[rgba(228,225,217,0.9)] backdrop-blur-md py-3.5"
           : "bg-transparent py-5 md:py-6"
       }`}
     >
@@ -75,7 +75,7 @@ export function Navbar() {
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[rgba(232,236,244,0.16)] text-mist lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-sm border border-[rgba(28,33,40,0.16)] text-mist lg:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           aria-label={open ? "Close menu" : "Open menu"}
@@ -97,7 +97,7 @@ export function Navbar() {
       {open ? (
         <div
           id="mobile-nav"
-          className="border-t border-[rgba(232,236,244,0.08)] bg-[rgba(11,15,31,0.97)] px-5 py-6 lg:hidden"
+          className="border-t border-[rgba(28,33,40,0.08)] bg-[rgba(228,225,217,0.97)] px-5 py-6 lg:hidden"
         >
           <nav className="flex flex-col gap-4" aria-label="Mobile">
             {[...primaryNav, ...secondaryNav].map((item) => (

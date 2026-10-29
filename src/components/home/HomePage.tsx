@@ -53,7 +53,7 @@ export function HomePage() {
       </section>
 
       {/* 02 What you can use — RipplePoint Live Beta, no primary hierarchy */}
-      <section className="border-t border-[rgba(232,236,244,0.08)] py-20 md:py-28">
+      <section className="border-t border-[rgba(28,33,40,0.08)] py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading
@@ -70,7 +70,7 @@ export function HomePage() {
           <Reveal delay={60}>
             <Link
               href="/ripplepoint"
-              className="mt-12 block overflow-hidden border border-teal/35 bg-[radial-gradient(ellipse_at_80%_0%,rgba(15,168,143,0.18),transparent_55%),linear-gradient(160deg,#12182b,#0b0f1f)] p-8 transition hover:border-teal/55 md:p-10"
+              className="mt-12 block overflow-hidden border border-teal/35 bg-[radial-gradient(ellipse_at_80%_0%,rgba(58,90,114,0.18),transparent_55%),linear-gradient(160deg,#f2efe8,#e4e1d9)] p-8 transition hover:border-teal/55 md:p-10"
             >
               <div className="flex flex-wrap items-center gap-3">
                 <StatusBadge status="live-beta" />
@@ -91,7 +91,7 @@ export function HomePage() {
       </section>
 
       {/* 03 Contrast — isolated tools vs connected consequence */}
-      <section className="border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
+      <section className="border-y border-[rgba(28,33,40,0.08)] bg-section-soft py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading title="Most tools report the event or the indicator.">
@@ -135,7 +135,7 @@ export function HomePage() {
       </section>
 
       {/* 05 Supporting — ripple philosophy */}
-      <section className="border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
+      <section className="border-y border-[rgba(28,33,40,0.08)] bg-section-soft py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading eyebrow="How we think" title="Every risk has a ripple.">
@@ -171,7 +171,7 @@ export function HomePage() {
       {/* 07 Ripple sequence */}
       <section
         id="intelligence"
-        className="scroll-mt-24 border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28"
+        className="scroll-mt-24 border-y border-[rgba(28,33,40,0.08)] bg-section-soft py-20 md:py-28"
       >
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
@@ -209,7 +209,7 @@ export function HomePage() {
       <RealWorldRipples />
 
       {/* 10 Human decision */}
-      <section className="border-y border-[rgba(232,236,244,0.08)] py-20 md:py-28">
+      <section className="border-y border-[rgba(28,33,40,0.08)] py-20 md:py-28">
         <div className="mx-auto max-w-3xl px-5 text-center md:px-8">
           <Reveal>
             <h2 className="font-display text-3xl text-off-white md:text-5xl">
@@ -242,7 +242,7 @@ export function HomePage() {
       </section>
 
       {/* Final */}
-      <section className="border-t border-[rgba(232,236,244,0.08)] bg-atmosphere py-24 md:py-32">
+      <section className="border-t border-[rgba(28,33,40,0.08)] bg-atmosphere py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-5 text-center md:px-8">
           <Reveal>
             <h2 className="font-display text-4xl text-off-white md:text-5xl">

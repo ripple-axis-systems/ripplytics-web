@@ -75,7 +75,7 @@ export default function AboutPage() {
         </Reveal>
       </section>
 
-      <section className="border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
+      <section className="border-y border-[rgba(28,33,40,0.08)] bg-section-soft py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading title="We started with a question.">
@@ -104,7 +104,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28">
+      <section className="border-y border-[rgba(28,33,40,0.08)] bg-section-soft py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
             <SectionHeading title="A new generation of risk intelligence.">
@@ -121,7 +121,7 @@ export default function AboutPage() {
                   <span className="h-1.5 w-1.5 rounded-full bg-teal/70" aria-hidden="true" />
                   {item}
                   {index < disciplines.length - 1 ? (
-                    <span className="hidden text-white/15 sm:inline" aria-hidden="true">
+                    <span className="hidden text-[rgba(28,33,40,0.2)] sm:inline" aria-hidden="true">
                       ·
                     </span>
                   ) : null}
@@ -145,9 +145,9 @@ export default function AboutPage() {
           <div className="mt-12 grid gap-4 md:grid-cols-3">
             {teamPlaceholders.map((person, index) => (
               <Reveal key={`team-${index}`} delay={index * 50}>
-                <div className="h-full border border-dashed border-[rgba(232,236,244,0.18)] bg-white/[0.015] p-6">
+                <div className="h-full border border-dashed border-[rgba(28,33,40,0.18)] bg-[rgba(28,33,40,0.03)] p-6">
                   <div
-                    className="mb-5 h-16 w-16 rounded-sm border border-[rgba(232,236,244,0.12)] bg-white/[0.03]"
+                    className="mb-5 h-16 w-16 rounded-sm border border-[rgba(28,33,40,0.12)] bg-[rgba(28,33,40,0.045)]"
                     aria-hidden="true"
                   />
                   <p className="font-display text-xl text-off-white/70">{person.name}</p>
@@ -164,7 +164,7 @@ export default function AboutPage() {
 
       <section
         id="connect"
-        className="scroll-mt-24 border-y border-[rgba(232,236,244,0.08)] bg-section-soft py-20 md:py-28"
+        className="scroll-mt-24 border-y border-[rgba(28,33,40,0.08)] bg-section-soft py-20 md:py-28"
       >
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <Reveal>
@@ -179,7 +179,7 @@ export default function AboutPage() {
             {connectPlaceholders.map((item) => (
               <span
                 key={item.label}
-                className="inline-flex items-center gap-2 rounded-sm border border-[rgba(232,236,244,0.12)] px-4 py-2.5 text-sm text-mist/70"
+                className="inline-flex items-center gap-2 rounded-sm border border-[rgba(28,33,40,0.12)] px-4 py-2.5 text-sm text-mist/70"
               >
                 {item.label}
                 <span className="text-[11px] uppercase tracking-[0.12em] text-muted">
@@ -202,7 +202,7 @@ export default function AboutPage() {
             </SectionHeading>
           </Reveal>
           <Reveal delay={80}>
-            <div className="mt-12 overflow-hidden rounded-sm border border-[rgba(232,236,244,0.1)] bg-white/[0.02] px-5 py-8 md:px-8">
+            <div className="mt-12 overflow-hidden rounded-sm border border-[rgba(28,33,40,0.1)] bg-[rgba(28,33,40,0.035)] px-5 py-8 md:px-8">
               <div className="flex flex-wrap items-center gap-2 text-sm md:gap-3 md:text-base">
                 {["Information", "Context", "Relationships", "Interpretation", "Decision"].map(
                   (step, index) => (
@@ -220,7 +220,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="border-y border-[rgba(232,236,244,0.08)] py-20 md:py-28">
+      <section className="border-y border-[rgba(28,33,40,0.08)] py-20 md:py-28">
         <div className="mx-auto max-w-4xl px-5 text-center md:px-8">
           <Reveal>
             <h2 className="font-display text-3xl text-off-white md:text-5xl">
@@ -239,7 +239,7 @@ export default function AboutPage() {
           <div className="space-y-0">
             {principles.map((item, index) => (
               <Reveal key={item.title} delay={index * 40}>
-                <div className="grid gap-2 border-t border-[rgba(232,236,244,0.1)] py-8 md:grid-cols-[1.2fr_1fr] md:items-baseline md:gap-10">
+                <div className="grid gap-2 border-t border-[rgba(28,33,40,0.1)] py-8 md:grid-cols-[1.2fr_1fr] md:items-baseline md:gap-10">
                   <h3 className="font-display text-2xl text-off-white md:text-3xl">{item.title}</h3>
                   <p className="text-muted md:text-lg">{item.body}</p>
                 </div>

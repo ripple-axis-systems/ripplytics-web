@@ -1,126 +1,121 @@
+/** Theme B hero — annotated risk field map (not radar orb). */
 export function HeroRipple() {
   return (
     <div
-      className="relative mx-auto aspect-square w-full max-w-[560px]"
+      className="relative mx-auto aspect-[5/4] w-full max-w-[580px]"
       aria-hidden="true"
     >
-      {/* Soft field */}
-      <div className="absolute inset-[6%] rounded-full bg-[radial-gradient(circle_at_center,rgba(15,168,143,0.12)_0%,transparent_62%)]" />
-      <div className="absolute inset-[10%] rounded-full border border-[rgba(15,168,143,0.16)]" />
-      <div className="absolute inset-[22%] rounded-full border border-[rgba(15,168,143,0.12)]" />
-      <div className="absolute inset-[34%] rounded-full border border-[rgba(232,236,244,0.07)]" />
+      <div className="absolute inset-0 border border-[rgba(28,33,40,0.14)] bg-[linear-gradient(165deg,#f2efe8_0%,#e8e4db_55%,#ddd8cf_100%)]" />
 
-      {/* Propagation rings */}
-      <div className="absolute inset-[14%] rounded-full border border-teal/35 animate-propagate" />
+      {/* Quiet print grid */}
       <div
-        className="absolute inset-[14%] rounded-full border border-teal/22 animate-propagate"
-        style={{ animationDelay: "1.5s" }}
-      />
-      <div
-        className="absolute inset-[14%] rounded-full border border-teal/12 animate-propagate"
-        style={{ animationDelay: "3s" }}
+        className="absolute inset-3 opacity-[0.45]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(28,33,40,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(28,33,40,0.05) 1px, transparent 1px)",
+          backgroundSize: "28px 28px",
+        }}
       />
 
-      <svg viewBox="0 0 400 400" className="absolute inset-0 h-full w-full">
+      <svg viewBox="0 0 520 420" className="absolute inset-0 h-full w-full">
         <defs>
-          <linearGradient id="hero-edge" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#0FA88F" stopOpacity="0.55" />
-            <stop offset="100%" stopColor="#E8ECF4" stopOpacity="0.12" />
+          <linearGradient id="hero-path" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#3A5A72" stopOpacity="0.85" />
+            <stop offset="100%" stopColor="#3A5A72" stopOpacity="0.25" />
           </linearGradient>
         </defs>
 
-        {/* Secondary lattice — quiet structure */}
-        <g stroke="rgba(232,236,244,0.06)" strokeWidth="0.75" fill="none">
-          <path d="M70 140 L140 110 L200 200" />
-          <path d="M330 120 L280 160 L200 200" />
-          <path d="M340 280 L270 260 L200 200" />
-          <path d="M80 270 L130 250 L200 200" />
+        {/* Contour / field bands */}
+        <g fill="none" stroke="rgba(58,90,114,0.14)" strokeWidth="1">
+          <path d="M40 310 C120 290, 180 250, 240 210 C300 170, 360 140, 480 120" />
+          <path d="M36 280 C130 255, 190 220, 250 185 C310 150, 380 118, 484 95" />
+          <path d="M48 340 C140 325, 200 290, 255 250 C320 200, 390 165, 476 150" />
         </g>
 
-        <g stroke="url(#hero-edge)" strokeWidth="1.15" fill="none">
-          <path className="animate-path-draw" d="M200 200 L278 108" />
-          <path
-            className="animate-path-draw"
-            d="M200 200 L318 188"
-            style={{ animationDelay: "0.2s" }}
-          />
-          <path
-            className="animate-path-draw"
-            d="M200 200 L292 278"
-            style={{ animationDelay: "0.4s" }}
-          />
-          <path
-            className="animate-path-draw"
-            d="M200 200 L168 312"
-            style={{ animationDelay: "0.55s" }}
-          />
-          <path
-            className="animate-path-draw"
-            d="M200 200 L98 248"
-            style={{ animationDelay: "0.7s" }}
-          />
-          <path
-            className="animate-path-draw"
-            d="M200 200 L108 142"
-            style={{ animationDelay: "0.85s" }}
-          />
-          <path
-            className="animate-path-draw"
-            d="M278 108 L332 72"
-            stroke="rgba(15,168,143,0.28)"
-            style={{ animationDelay: "1.05s" }}
-          />
-          <path
-            className="animate-path-draw"
-            d="M318 188 L362 210"
-            stroke="rgba(15,168,143,0.24)"
-            style={{ animationDelay: "1.15s" }}
-          />
-          <path
-            className="animate-path-draw"
-            d="M292 278 L318 330"
-            stroke="rgba(15,168,143,0.22)"
-            style={{ animationDelay: "1.25s" }}
-          />
-          <path
-            className="animate-path-draw"
-            d="M98 248 L58 278"
-            stroke="rgba(15,168,143,0.2)"
-            style={{ animationDelay: "1.3s" }}
-          />
-        </g>
+        {/* Annotated decision path */}
+        <path
+          className="animate-path-draw"
+          d="M72 300 C130 285, 155 250, 188 220 C230 182, 268 168, 312 150 C360 130, 400 118, 448 108"
+          fill="none"
+          stroke="url(#hero-path)"
+          strokeWidth="2"
+        />
+        <path
+          className="animate-path-draw"
+          d="M188 220 C210 235, 235 268, 258 302"
+          fill="none"
+          stroke="rgba(58,90,114,0.45)"
+          strokeWidth="1.4"
+          strokeDasharray="4 3"
+          style={{ animationDelay: "0.35s" }}
+        />
+        <path
+          className="animate-path-draw"
+          d="M312 150 C340 175, 365 210, 392 248"
+          fill="none"
+          stroke="rgba(58,90,114,0.35)"
+          strokeWidth="1.25"
+          strokeDasharray="4 3"
+          style={{ animationDelay: "0.55s" }}
+        />
 
+        {/* Nodes along path */}
         <g>
-          <circle cx="200" cy="200" r="8" fill="#0FA88F" className="animate-node-pulse" />
-          <circle cx="200" cy="200" r="16" fill="none" stroke="#0FA88F" strokeOpacity="0.25" />
-          <circle cx="278" cy="108" r="4.5" fill="#E8ECF4" opacity="0.9" />
-          <circle cx="318" cy="188" r="4" fill="#E8ECF4" opacity="0.8" />
-          <circle cx="292" cy="278" r="4" fill="#E8ECF4" opacity="0.75" />
-          <circle cx="168" cy="312" r="3.5" fill="#9AA3B5" />
-          <circle cx="98" cy="248" r="3.5" fill="#9AA3B5" />
-          <circle cx="108" cy="142" r="3.5" fill="#9AA3B5" />
-          <circle cx="332" cy="72" r="2.8" fill="#0FA88F" opacity="0.75" />
-          <circle cx="362" cy="210" r="2.6" fill="#0FA88F" opacity="0.55" />
-          <circle cx="318" cy="330" r="2.6" fill="#0FA88F" opacity="0.45" />
-          <circle cx="58" cy="278" r="2.4" fill="#0FA88F" opacity="0.4" />
+          <circle cx="72" cy="300" r="5.5" fill="#3A5A72" className="animate-node-pulse" />
+          <circle cx="72" cy="300" r="11" fill="none" stroke="#3A5A72" strokeOpacity="0.28" />
+          <circle cx="188" cy="220" r="4.5" fill="#1C2128" />
+          <circle cx="312" cy="150" r="4.5" fill="#1C2128" />
+          <circle cx="448" cy="108" r="5" fill="#3A5A72" />
+          <circle cx="258" cy="302" r="3.5" fill="#5C6570" />
+          <circle cx="392" cy="248" r="3.5" fill="#5C6570" />
         </g>
 
-        {/* Labels — restrained, not stickers */}
+        {/* Callout ticks + labels — print annotations */}
+        <g stroke="rgba(28,33,40,0.35)" strokeWidth="0.9">
+          <path d="M72 300 L72 268" />
+          <path d="M188 220 L188 188" />
+          <path d="M312 150 L312 118" />
+          <path d="M448 108 L448 78" />
+          <path d="M258 302 L278 322" />
+          <path d="M392 248 L412 268" />
+        </g>
+
         <g
-          fill="#9AA3B5"
-          fontSize="9"
+          fill="#5C6570"
+          fontSize="10"
           fontFamily="var(--font-body), sans-serif"
-          letterSpacing="0.08em"
+          letterSpacing="0.1em"
         >
-          <text x="338" y="68" fill="#0FA88F" fillOpacity="0.85">
-            IMPACT
+          <text x="48" y="258" fill="#3A5A72" fillOpacity="0.95">
+            ORIGIN
           </text>
-          <text x="48" y="300">EXPOSURE</text>
-          <text x="152" y="348">ABSORB</text>
+          <text x="158" y="178">SIGNAL</text>
+          <text x="278" y="108">PATH</text>
+          <text x="418" y="68" fill="#3A5A72" fillOpacity="0.95">
+            DECISION
+          </text>
+          <text x="282" y="338">EXPOSURE</text>
+          <text x="416" y="284">ABSORB</text>
+        </g>
+
+        {/* Scale bar — print instrument feel */}
+        <g stroke="rgba(28,33,40,0.35)" strokeWidth="1" fill="#5C6570">
+          <path d="M40 380 L140 380" />
+          <path d="M40 376 L40 384" />
+          <path d="M90 377 L90 383" />
+          <path d="M140 376 L140 384" />
+          <text
+            x="148"
+            y="384"
+            fontSize="9"
+            fontFamily="var(--font-body), sans-serif"
+            letterSpacing="0.08em"
+            fill="#5C6570"
+          >
+            FIELD MAP
+          </text>
         </g>
       </svg>
-
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_32%,rgba(11,15,31,0.55)_80%)]" />
     </div>
   );
 }

@@ -15,7 +15,7 @@ const chain = [
 export function ConnectionChain() {
   return (
     <Reveal>
-      <div className="overflow-hidden rounded-sm border border-[rgba(232,236,244,0.1)] bg-[linear-gradient(180deg,rgba(18,24,43,0.7),rgba(11,15,31,0.3))] px-4 py-8 md:px-8 md:py-10">
+      <div className="overflow-hidden rounded-sm border border-[rgba(28,33,40,0.1)] bg-[linear-gradient(180deg,rgba(242,239,232,0.7),rgba(228,225,217,0.3))] px-4 py-8 md:px-8 md:py-10">
         <svg
           viewBox="0 0 760 100"
           className="mx-auto hidden h-auto w-full max-w-5xl md:block"
@@ -23,7 +23,7 @@ export function ConnectionChain() {
         >
           <path
             d="M30 50 H730"
-            stroke="rgba(15,168,143,0.35)"
+            stroke="rgba(58,90,114,0.35)"
             strokeWidth="1.5"
             fill="none"
             className="animate-path-draw"
@@ -37,7 +37,7 @@ export function ConnectionChain() {
                   cx={x}
                   cy="50"
                   r={index === 0 || index === chain.length - 1 ? 6 : 4.5}
-                  fill={index === 0 ? "#0FA88F" : "#E8ECF4"}
+                  fill={index === 0 ? "#3A5A72" : "#1C2128"}
                   opacity={index === chain.length - 1 ? 0.75 : 1}
                   className={index === 0 ? "animate-node-pulse" : undefined}
                 />
@@ -45,7 +45,7 @@ export function ConnectionChain() {
                   x={x}
                   y="78"
                   textAnchor="middle"
-                  fill="#9AA3B5"
+                  fill="#5C6570"
                   fontSize="10"
                   letterSpacing="0.04em"
                   fontFamily="var(--font-body), sans-serif"

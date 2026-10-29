@@ -36,7 +36,7 @@ export default function ContactPage() {
         </Reveal>
 
         <Reveal delay={80}>
-          <div className="space-y-8 rounded-sm border border-[rgba(232,236,244,0.1)] bg-white/[0.02] p-6 md:p-8">
+          <div className="space-y-8 rounded-sm border border-[rgba(28,33,40,0.1)] bg-[rgba(28,33,40,0.035)] p-6 md:p-8">
             <div>
               <p className="text-[11px] uppercase tracking-[0.18em] text-teal">
                 For investment professionals

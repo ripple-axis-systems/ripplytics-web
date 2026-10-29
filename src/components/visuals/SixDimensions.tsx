@@ -18,14 +18,14 @@ export function SixDimensions() {
   const current = sixDimensions[active];
 
   return (
-    <div className="overflow-hidden rounded-sm border border-[rgba(232,236,244,0.1)] figure-panel px-4 py-8 md:px-8 md:py-10">
+    <div className="overflow-hidden rounded-sm border border-[rgba(28,33,40,0.1)] figure-panel px-4 py-8 md:px-8 md:py-10">
       <div className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-12">
         <div className="relative mx-auto aspect-square w-full max-w-[420px]" aria-hidden="true">
           <svg viewBox="0 0 460 460" className="h-full w-full">
             <defs>
               <radialGradient id="dim-core" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stopColor="#0FA88F" stopOpacity="0.22" />
-                <stop offset="100%" stopColor="#0FA88F" stopOpacity="0" />
+                <stop offset="0%" stopColor="#3A5A72" stopOpacity="0.22" />
+                <stop offset="100%" stopColor="#3A5A72" stopOpacity="0" />
               </radialGradient>
             </defs>
 
@@ -35,7 +35,7 @@ export function SixDimensions() {
               cy="230"
               r="128"
               fill="none"
-              stroke="rgba(232,236,244,0.1)"
+              stroke="rgba(28,33,40,0.1)"
               strokeWidth="1"
             />
             <circle
@@ -43,15 +43,15 @@ export function SixDimensions() {
               cy="230"
               r="62"
               fill="none"
-              stroke="rgba(15,168,143,0.32)"
+              stroke="rgba(58,90,114,0.32)"
               strokeWidth="1.25"
             />
-            <circle cx="230" cy="230" r="7" fill="#0FA88F" className="animate-node-pulse" />
+            <circle cx="230" cy="230" r="7" fill="#3A5A72" className="animate-node-pulse" />
             <text
               x="230"
               y="258"
               textAnchor="middle"
-              fill="#E8ECF4"
+              fill="#1C2128"
               fontSize="9"
               letterSpacing="0.12em"
               fontFamily="var(--font-body), sans-serif"
@@ -65,7 +65,7 @@ export function SixDimensions() {
               cy="230"
               r="128"
               fill="none"
-              stroke="rgba(15,168,143,0.2)"
+              stroke="rgba(58,90,114,0.2)"
               strokeWidth="1"
               strokeDasharray="4 6"
             />
@@ -92,8 +92,8 @@ export function SixDimensions() {
                     y2={ny}
                     stroke={
                       selected || next === active
-                        ? "rgba(15,168,143,0.45)"
-                        : "rgba(232,236,244,0.1)"
+                        ? "rgba(58,90,114,0.45)"
+                        : "rgba(28,33,40,0.1)"
                     }
                     strokeWidth={selected || next === active ? 1.4 : 1}
                   />
@@ -102,14 +102,14 @@ export function SixDimensions() {
                     y1="210"
                     x2={x}
                     y2={y}
-                    stroke={selected ? "rgba(15,168,143,0.7)" : "rgba(232,236,244,0.12)"}
+                    stroke={selected ? "rgba(58,90,114,0.7)" : "rgba(28,33,40,0.12)"}
                     strokeWidth={selected ? 1.6 : 1}
                   />
                   <circle
                     cx={x}
                     cy={y}
                     r={selected ? 8 : 5}
-                    fill={selected ? "#0FA88F" : "#E8ECF4"}
+                    fill={selected ? "#3A5A72" : "#1C2128"}
                     opacity={selected ? 1 : 0.75}
                   />
                   {/* Callout label */}
@@ -117,7 +117,7 @@ export function SixDimensions() {
                     x={lx}
                     y={ly - 6}
                     textAnchor="middle"
-                    fill={selected ? "#0FA88F" : "#F4F6FA"}
+                    fill={selected ? "#3A5A72" : "#12151A"}
                     fontSize="11"
                     fontWeight="600"
                     fontFamily="var(--font-display), sans-serif"
@@ -128,7 +128,7 @@ export function SixDimensions() {
                     x={lx}
                     y={ly + 8}
                     textAnchor="middle"
-                    fill="#9AA3B5"
+                    fill="#5C6570"
                     fontSize="9"
                     fontFamily="var(--font-body), sans-serif"
                   >
@@ -176,7 +176,7 @@ export function SixDimensions() {
                     className={`w-full border-l-2 py-1.5 pl-3 text-left text-sm transition ${
                       selected
                         ? "border-teal text-teal"
-                        : "border-[rgba(232,236,244,0.14)] text-muted hover:border-teal/40 hover:text-mist"
+                        : "border-[rgba(28,33,40,0.14)] text-muted hover:border-teal/40 hover:text-mist"
                     }`}
                   >
                     {dim.label.replace("Systemic ", "")}

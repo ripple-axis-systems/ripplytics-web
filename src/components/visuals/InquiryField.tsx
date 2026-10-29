@@ -24,7 +24,7 @@ export function InquiryField() {
               cy="160"
               r="118"
               fill="none"
-              stroke="rgba(232,236,244,0.08)"
+              stroke="rgba(28,33,40,0.08)"
               strokeWidth="1"
             />
             <circle
@@ -32,15 +32,15 @@ export function InquiryField() {
               cy="160"
               r="72"
               fill="none"
-              stroke="rgba(15,168,143,0.22)"
+              stroke="rgba(58,90,114,0.22)"
               strokeWidth="1"
             />
-            <circle cx="160" cy="160" r="8" fill="#0FA88F" className="animate-node-pulse" />
+            <circle cx="160" cy="160" r="8" fill="#3A5A72" className="animate-node-pulse" />
             <text
               x="160"
               y="188"
               textAnchor="middle"
-              fill="#E8ECF4"
+              fill="#1C2128"
               fontSize="11"
               letterSpacing="0.14em"
               fontFamily="var(--font-display), sans-serif"
@@ -61,13 +61,13 @@ export function InquiryField() {
                     y1={ly}
                     x2={x}
                     y2={y}
-                    stroke="rgba(15,168,143,0.35)"
+                    stroke="rgba(58,90,114,0.35)"
                     strokeWidth="1"
                     className="animate-path-draw"
                     style={{ animationDelay: `${index * 0.08}s` }}
                     strokeDasharray="80"
                   />
-                  <circle cx={x} cy={y} r="4" fill="#E8ECF4" opacity="0.85" />
+                  <circle cx={x} cy={y} r="4" fill="#1C2128" opacity="0.85" />
                 </g>
               );
             })}
