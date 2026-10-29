@@ -5,6 +5,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { StatusBadge } from "@/components/ui/StatusBadge";
 import { AmbitionArc } from "@/components/visuals/AmbitionArc";
 import { HeroRipple } from "@/components/visuals/HeroRipple";
+import { SketchFieldBackdrop } from "@/components/visuals/SketchFieldBackdrop";
 import { InquiryField } from "@/components/visuals/InquiryField";
 import { ProductEcosystem } from "@/components/visuals/ProductEcosystem";
 import { RipplePath } from "@/components/visuals/RipplePath";
@@ -20,9 +21,10 @@ export function HomePage() {
 
   return (
     <div>
-      {/* 01 Hero — locked Round 5 promise */}
+      {/* 01 Hero — locked Round 5 promise; Theme B2 sketch field */}
       <section className="bg-atmosphere relative overflow-hidden">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-32 md:px-8 md:pb-28 md:pt-40 lg:grid-cols-[1.05fr_0.95fr]">
+        <SketchFieldBackdrop />
+        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-32 md:px-8 md:pb-28 md:pt-40 lg:grid-cols-[1.05fr_0.95fr]">
           <div className="animate-fade-rise">
             <p className="font-display text-5xl leading-[1.02] tracking-[-0.03em] text-off-white md:text-6xl lg:text-[4.5rem]">
               Ripplytics

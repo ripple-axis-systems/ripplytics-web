@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* Theme B2 — deep energetic field (Theme A color confidence)
+   differentiated by sketchy risk visualisation, not pale paper. */
 :root {
   --navy: #0b0f1f;
   --navy-elevated: #12182b;
@@ -77,16 +79,30 @@ a {
 
 .bg-atmosphere {
   background:
-    radial-gradient(ellipse 80% 50% at 70% -10%, rgba(15, 168, 143, 0.16), transparent 55%),
-    radial-gradient(ellipse 60% 40% at 10% 20%, rgba(26, 34, 56, 0.9), transparent 50%),
+    radial-gradient(ellipse 70% 48% at 78% 12%, rgba(15, 168, 143, 0.14), transparent 58%),
+    radial-gradient(ellipse 55% 40% at 12% 28%, rgba(26, 34, 56, 0.92), transparent 52%),
     linear-gradient(180deg, #0b0f1f 0%, #0e1426 45%, #0b0f1f 100%);
 }
 
-/* Soft grid under figures — atmosphere, not decoration overload */
+/* Soft grid under figures — faint sketch field, not glow orb */
 .figure-panel {
   background:
-    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(15, 168, 143, 0.08), transparent 65%),
-    linear-gradient(180deg, rgba(18, 24, 43, 0.75), rgba(11, 15, 31, 0.35));
+    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(15, 168, 143, 0.07), transparent 65%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 27px,
+      rgba(232, 236, 244, 0.028) 27px,
+      rgba(232, 236, 244, 0.028) 28px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 27px,
+      rgba(232, 236, 244, 0.028) 27px,
+      rgba(232, 236, 244, 0.028) 28px
+    ),
+    linear-gradient(180deg, rgba(18, 24, 43, 0.78), rgba(11, 15, 31, 0.4));
 }
 
 .bg-section-soft {
@@ -145,6 +161,37 @@ a {
   }
 }
 
+@keyframes path-draw-long {
+  from {
+    stroke-dashoffset: 520;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes sketch-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translate3d(6px, -4px, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes sketch-drift-alt {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-5px, 5px, 0);
+  }
+}
+
 @keyframes fade-rise {
   from {
     opacity: 0;
@@ -167,6 +214,23 @@ a {
 .animate-path-draw {
   stroke-dasharray: 240;
   animation: path-draw 2.4s ease-out forwards;
+}
+
+.animate-path-draw-long {
+  stroke-dasharray: 520;
+  animation: path-draw-long 2.8s ease-out forwards;
+}
+
+.animate-sketch-drift {
+  animation: sketch-drift 18s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.animate-sketch-drift-alt {
+  animation: sketch-drift-alt 22s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
 }
 
 .animate-fade-rise {
@@ -241,6 +305,9 @@ a {
   .animate-propagate,
   .animate-node-pulse,
   .animate-path-draw,
+  .animate-path-draw-long,
+  .animate-sketch-drift,
+  .animate-sketch-drift-alt,
   .animate-fade-rise {
     animation: none !important;
   }
