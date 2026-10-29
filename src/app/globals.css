@@ -79,8 +79,9 @@ a {
 
 .bg-atmosphere {
   background:
-    radial-gradient(ellipse 70% 48% at 78% 12%, rgba(15, 168, 143, 0.14), transparent 58%),
-    radial-gradient(ellipse 55% 40% at 12% 28%, rgba(26, 34, 56, 0.92), transparent 52%),
+    radial-gradient(ellipse 78% 52% at 72% -8%, rgba(15, 168, 143, 0.2), transparent 56%),
+    radial-gradient(ellipse 48% 38% at 88% 42%, rgba(15, 168, 143, 0.1), transparent 60%),
+    radial-gradient(ellipse 60% 42% at 10% 22%, rgba(26, 34, 56, 0.92), transparent 50%),
     linear-gradient(180deg, #0b0f1f 0%, #0e1426 45%, #0b0f1f 100%);
 }
 

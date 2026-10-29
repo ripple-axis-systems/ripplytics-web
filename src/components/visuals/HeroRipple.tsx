@@ -29,8 +29,8 @@ export function HeroRipple() {
         <g
           className="animate-sketch-drift"
           fill="none"
-          stroke="rgba(15,168,143,0.2)"
-          strokeWidth="1.05"
+          stroke="rgba(15,168,143,0.28)"
+          strokeWidth="1.1"
           strokeLinecap="round"
         >
           <path d="M38 318 C95 292, 148 268, 198 238 C255 202, 318 168, 402 148 C445 138, 478 132, 498 128" />
@@ -44,7 +44,7 @@ export function HeroRipple() {
 
         {/* Primary transmission path — draw-on */}
         <path
-          className="animate-path-draw animate-path-draw-long"
+          className="animate-path-draw-long"
           d="M68 305 C125 288, 152 262, 186 228 C228 188, 268 172, 308 154 C358 132, 402 118, 452 108"
           fill="none"
           stroke="url(#hero-b2-path)"
